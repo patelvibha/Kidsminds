@@ -6,60 +6,75 @@ class Myheader extends HTMLElement {
       this.innerHTML = `
       
       <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-       
-         <img src="../img/logo.svg" alt=""> 
-         <!-- <h1>Kidsminds<span>.</span></h1> -->
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About</a></li>        
-         
-          <li class="dropdown"><a href="#"><span>Nursery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+      <header id="header" class="header">
+      <div class="top-header container d-flex">
+        <div class="text-left contact-info">
+          <a href="tel:44 02034886800"><i class="bi bi-telephone icon"></i><span>+44 020 3488 6800</span></a>
+  
+          <a href="mailto:enquiries@kidsminds.co.uk"><span id="et-info-email">enquiries@kidsminds.co.uk</span></a>
+        </div>
+        
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        
+        </div>
+  
+      </div>
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+           
+             <img src="../img/logo.svg" alt=""> 
+             <!-- <h1>Kidsminds<span>.</span></h1> -->
+          </a>
+    
+          <nav id="navbar" class="navbar">
             <ul>
-
-              <li class="dropdown"><a href="#"><span>For Child</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">startup Training</a></li>
-                  <li><a href="#">Childcare Course</a></li>
-                  <li><a href="#">DBS Check</a></li>
-                  <li><a href="#">Nursary Appliation Form</a></li>                  
-                  <li><a href="#">Child Application Form</a></li>
-                </ul>
-              </li>
-              
-              <li class="dropdown"><a href="#"><span>For Parents</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Parents Application Form</a></li>
-                  <li><a href="#">Ofsted Registration Details</a></li>
-                  <li><a href="#">Nursery</a></li>
-                </ul>
-              </li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About</a></li>        
              
+              <li class="dropdown"><a href="#"><span>Nursery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+    
+                  <li class="dropdown"><a href="#"><span>For Child</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="#">startup Training</a></li>
+                      <li><a href="#">Childcare Course</a></li>
+                      <li><a href="#">DBS Check</a></li>
+                      <li><a href="#">Nursary Appliation Form</a></li>                  
+                      <li><a href="#">Child Application Form</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown"><a href="#"><span>For Parents</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="#">Parents Application Form</a></li>
+                      <li><a href="#">Ofsted Registration Details</a></li>
+                      <li><a href="#">Nursery</a></li>
+                    </ul>
+                  </li>
+                 
+                </ul>
+              </li>
+    
+              <li><a href="">local authority</a></li>
+    
+              <li><a href="#contact">Career</a></li>
+              <li><a href="#contact">Blog</a></li>
+              <li><a href="#contact">Support</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-          </li>
-
-          <li><a href="">local authority</a></li>
-
-          <li><a href="#contact">Career</a></li>
-          <li><a href="#contact">Blog</a></li>
-          <li><a href="#contact">Support</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-      <a class="btn-signin" href="#join-us">Log In</a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-    </div>
-  </header><!-- End Header -->
-      
+          </nav><!-- .navbar -->
+    
+          <a class="btn-signin" href="#join-us">Join Us</a>
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+        </div>
+      </header><!-- End Header -->      
       `;
     }
   }

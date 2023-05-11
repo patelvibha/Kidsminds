@@ -8,10 +8,9 @@
   /* Colors */
   :root {
     --color-default: #212529;
-    --color-primary: #ce1212;
-    --color-secondary: #37373f;
+    --color-primary: #00AEEF;
+    --color-secondary: #EE2A7B;
   }
-  
   /* Smooth scroll behavior */
   :root {
     scroll-behavior: smooth;
@@ -47,6 +46,37 @@
   /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
+  
+  
+  .top-header
+  {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #21252914;
+    padding: 8px 0;
+    margin-bottom: 8px;
+  }
+
+  .header .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #21252914;
+    font-size: 14px;
+    color: var(--color-default);
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+  .header .social-links a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+
   section {
     overflow: hidden;
     padding: 80px 0;
@@ -206,7 +236,7 @@
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    height: 90px;
+    height: 130px;
     border-bottom: 1px solid #fff;
   }
   
@@ -217,7 +247,7 @@
   }
   
   .header .logo img {
-    max-height: 60px;
+    max-height: 50px;
     width: 100%;
   }
   
@@ -1345,7 +1375,6 @@
     position: relative;
     /* min-height: 60vh; */
     padding: 80px 0 60px 0;
-    margin-top: 80px;
     background-image: url("../img/hero.jpg") ;
   }
   
@@ -1353,7 +1382,7 @@
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--color-secondary);
+    color: var(--color-default);
     font-family: var(--font-primary);
   }
   
@@ -1510,3 +1539,301 @@
     color: #fff;
   }
 
+/* ---------------------------------------- */
+/*            Chatbot Css                   */
+/* ---------------------------------------- */
+
+
+.ChatWindow {
+  border-radius: 10px;
+  color: #fff;
+  height: 500px;
+  max-height: 500px;
+  max-width: 300px;
+  overflow: hidden;
+  -webkit-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  -ms-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  width: 100%;
+}
+.botIcon .Layout {
+  -webkit-animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  -ms-animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
+  -webkit-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  background-color: rgb(63, 81, 181);
+  bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 0 20px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: content-box !important;
+  color: rgb(255, 255, 255);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  max-height: 30px;
+  max-width: 300px;
+  min-width: 50px;
+  opacity: 0;
+  pointer-events: auto;
+  position: fixed;
+  -webkit-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
+  -ms-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
+  transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
+  z-index: 999999999;
+}
+
+.ChatWindow-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100%;
+}
+
+.ResponseCard {
+  flex: 0 0 auto;
+  margin-bottom: 2rem;
+  border: 1px solid #DAE8F4;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 86, 163, 0.1);
+  line-height: 1.3;
+  transition: all 0.1s;
+  transform-origin: center center;
+}
+
+.ResponseCard:hover {
+  transform: scale(1.01) translateY(-0.1rem);
+  box-shadow: 0 6px 7px rgba(0, 86, 163, 0.1);
+}
+
+.ResponseCard-option {
+  padding: 1rem;
+  border-top: 1px solid #DAE8F4;
+  cursor: pointer;
+  font-weight: 700;
+  color: #333;
+  transition: none;
+}
+.ResponseCard-option:hover {
+  background: #f5f5f5;
+  background: tint(#007FEF, 90%);
+}
+.ResponseCard-option:first-child {
+  border: 0;
+  border-radius: 8px 8px 0 0;
+}
+.ResponseCard-option:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.ChatItem {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ChatItem--expert {
+  flex-direction: row-reverse;
+}
+
+.ChatItem-meta {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+  width: 2.5rem;
+}
+.ChatItem--expert .ChatItem-meta {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.ChatItem-chatContent {
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ChatItem-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.ChatItem--expert .ChatItem-avatar {
+  margin-right: 0;
+}
+
+.ChatItem-avatarImage {
+  max-width: 100%;
+  border-radius: 100em;
+}
+
+.ChatItem-avatarInitials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #ccc;
+  color: #444;
+  border-radius: 100em;
+}
+
+.ChatItem-timeStamp {
+  width: 70%;
+  font-size: 0.875rem;
+  color: #666;
+}
+.ChatItem--expert .ChatItem-timeStamp {
+  margin-left: auto;
+}
+
+.MessageLoading {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background: #eee;
+  border-radius: 8px;
+  width: auto;
+}
+
+.MessageLoading-dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 2rem;
+  background: #007FEF;
+  animation-name: MessageLoadingDot;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  transform: scale(0.3);
+  opacity: 0;
+  animation-delay: 0.25s;
+  line-height: 1;
+}
+
+.MessageLoading-dot:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.MessageLoading-dot:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+
+.RealMessage {
+  width: 100%;
+}
+
+.ChatItem-chatText {
+  position: relative;
+  width: 70%;
+  flex: 0 1 auto;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background: #007FEF;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.175);
+  line-height: 1.3;
+}
+.ChatItem--expert .ChatItem-chatText {
+  margin-left: auto;
+  border: 1px solid #dbdbdb;
+  background: white;
+  color: #666;
+}
+
+.ChatItem-chatText > div {
+  display: inline;
+}
+
+.ChatInput {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  width: 48rem;
+  height: 5rem;
+  transform: translateX(-50%);
+  background: #F5F7F9;
+}
+
+.ChatInput-input {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 1.5rem;
+  padding-right: 5.25rem;
+  border: 0;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  resize: none;
+}
+
+[contenteditable]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: #999;
+}
+
+[contenteditable]:active,
+[contenteditable]:focus {
+  border: 0;
+  border-top: 1px solid #ccc;
+  outline: 0;
+  box-shadow: inherit;
+}
+
+.ChatInput-btnSend {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 8px;
+  background: #007FEF;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes MessageLoadingDot {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+.botIcon .iconInner{bottom: 15px;right: 15px;position: fixed;z-index: 9999;cursor: pointer;}
+.botIcon i{font-size: 50px; color: var(--color-primary);}

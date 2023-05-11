@@ -1,0 +1,45 @@
+<h2>Form</h2>
+
+<form id="my_form">
+	<label for="name">First name: </label>
+	<input type="text" id="firstname" name="Firstname" value="" placeholder="Your name here...">
+	<br>
+	<label for="surname">Last name: </label>
+	<input type="text" id="surname" name="Lastname" value="" placeholder="Your surname here..."><br>
+  <input type="file" id="myFile" name="filename">
+	<br>
+	<input type="submit" value="Submit" id="btn" title="Get form's query-string">
+
+</form>
+
+<script>
+  const form = document.getElementById("my_form");
+  const firstname = document.getElementById("firstname");
+  const surname = document.getElementById("surname");
+  // const myFile = document.getElementById("myFile");
+    form. addEventListener("submit", function(e){
+    e.preventDefault();
+    const firstnamevalue=firstname.value;
+    const surnamevalue=surname.value;
+    // const myFilevalue=myFile.value;
+
+    localStorage.setItem('firstname',firstnamevalue);
+    localStorage.setItem('surname',surnamevalue);
+   
+
+    const imgPath = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+        
+        localStorage.setItem("myFile", reader.result);
+    }, false);
+
+    if (imgPath) {
+        reader.readAsDataURL(imgPath);
+    }
+
+    window.location.href ="test1.html";
+
+  })
+</script>

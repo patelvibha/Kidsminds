@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Kids Minds</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
+
+  <!-- lib CSS Files -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="lib/aos/aos.css" rel="stylesheet">
+  <link href="lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+
+
+
+
+<div class="botIcon">
+	<div class="botIconContainer">
+		<div class="iconInner">
+			<i class="bi bi-messenger" aria-hidden="true"></i>
+		</div>
+	</div>
+
+    <div class="ChatWindow">   
+    <div class="ChatWindow-inner">      
+      <div class="ChatItem ChatItem--customer">
+        <div class="ChatItem-meta">
+          <div class="ChatItem-avatar">
+            <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+          </div>
+        </div>
+        <div class="ChatItem-chatContent">
+          <div class="ChatItem-chatText">sound isnt working on my phone anymore</div>
+          <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div>
+        </div>
+      </div>
+  
+      <div class="ResponseCard js-responseCard" style="opacity: 0">
+        <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div>
+        <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div>
+        <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script>
+    $(document).on('click', '.iconInner', function(e) {
+       $(this).parents('.botIcon').addClass('showBotSubject');
+       // $("[name='msg']").focus();
+   });
+
+   jQuery(document).on('click', '.closeBtn, .chat_close_icon', function(e) {
+       jQuery(this).parents('.botIcon').removeClass('showBotSubject');
+       jQuery(this).parents('.botIcon').removeClass('showMessenger');
+   });
+
+   jQuery(document).on('submit', '#botSubject', function(e) {
+       e.preventDefault();
+
+       jQuery(this).parents('.botIcon').removeClass('showBotSubject');
+       jQuery(this).parents('.botIcon').addClass('showMessenger');
+   });
+   
+</script>
+
+<script>
+    (function() {
+  var $responseCard, $responseOption, addCustomerMessage, addExpertMessage, addRealMessage, addResponseCard, appendMessage;
+
+  $responseOption = $('.js-responseOption');
+
+  $responseCard = $('.js-responseCard');
+
+  $.Velocity.hook($('.js-responseCard'), 'translateY', '1rem');
+
+  $.Velocity.hook($('.js-responseCard'), 'opacity', 0);
+
+  $responseCard.velocity({
+    opacity: 1,
+    translateY: [0, [500, 20]]
+  }, {
+    delay: 250,
+    complete: function() {
+      return $(this).attr('style', '');
+    }
+  });
+
+  $(document).on('click', '.js-responseOption', function(e) {
+    var $this, message;
+    $this = $(this);
+    message = $this.text();
+    console.log(message);
+    return $this.velocity({
+      opacity: 0.5
+    }, {
+      duration: 25,
+      complete: function() {
+        return $this.velocity({
+          opacity: 0.5
+        }, {
+          duration: 25
+        }).velocity({
+          opacity: 1
+        }, {
+          duration: 40
+        }).velocity({
+          opacity: 0.5
+        }, {
+          duration: 25
+        }).velocity({
+          opacity: 1
+        }, {
+          duration: 40,
+          complete: function() {
+            return appendMessage(message);
+          }
+        });
+      }
+    });
+  });
+
+  appendMessage = function(message) {
+    return $('.js-responseCard').velocity({
+      scale: 1,
+      opacity: 0,
+      height: 0,
+      translateY: '-1rem'
+    }, {
+      complete: function() {
+        var addCustomerMessageTimeout, addExpertMessageTimeout, addResponseCardTimeout;
+        $(this).remove();
+        addExpertMessageTimeout = setTimeout(addExpertMessage(message), 100);
+        addCustomerMessageTimeout = setTimeout(addCustomerMessage, 1600);
+        return addResponseCardTimeout = setTimeout(addResponseCard, 4600);
+      }
+    });
+  };
+
+  addExpertMessage = function(message) {
+    $('.ChatWindow-inner').append('<div class="ChatItem ChatItem--expert is-added" style="opacity: 0;"> <div class="ChatItem-chatContent"> <div class="ChatItem-chatText">' + message + '</div> <div class="ChatItem-timeStamp"><strong>Me</strong> · Today 05:49</div> </div> </div>');
+    $('.ChatWindow').animate({
+      scrollTop: $('.ChatWindow').prop("scrollHeight")
+    }, 500);
+    $.Velocity.hook($('.is-added'), 'translateY', '0.5rem');
+    return $('.is-added').velocity({
+      opacity: 1,
+      translateY: 0
+    }, {
+      complete: function() {
+        return $('.is-added').removeClass('is-added');
+      }
+    });
+  };
+
+  addCustomerMessage = () => {
+    $('.ChatWindow-inner').append('<div class="ChatItem ChatItem--customer is-added" style="opacity: 0;"> <div class="ChatItem-meta"> <div class="ChatItem-avatar"> <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png"> </div> </div> <div class="ChatItem-chatContent"> <div class="MessageLoading"> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> </div> </div> </div>');
+    $('.ChatWindow').animate({
+      scrollTop: $('.ChatWindow').prop("scrollHeight")
+    }, 500);
+    $.Velocity.hook($('.is-added'), 'translateY', '0.5rem');
+    return $('.is-added').velocity({
+      opacity: 1,
+      translateY: 0
+    }, {
+      complete: function() {
+        return setTimeout(addRealMessage, 1000);
+      }
+    });
+  };
+
+  addRealMessage = function() {
+    var randomMessage, randomPick;
+    randomMessage = new Array("i think that helps me but how do i navigate to that setting?", "ok thx i'll try that", "i don't even know", "hold on i have to tell my husband to be quiet", "is this tray that pops out of my desktop computer a cup holder? hold one let me try it", "i have the hiccups, do you know a cure", "you ask a lot of questions", "give me a sec let me check");
+    randomPick = randomMessage[Math.floor(Math.random() * randomMessage.length)];
+    $('.is-added .MessageLoading').remove();
+    $('.is-added .ChatItem-chatContent').append('<div class="RealMessage" style="opacity:0;"> <div class="ChatItem-chatText">' + randomPick + '</div> <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div> </div>');
+    $('.ChatWindow').animate({
+      scrollTop: $('.ChatWindow').prop("scrollHeight")
+    }, 500);
+    return $('.RealMessage').velocity({
+      opacity: 1
+    }, {
+      duration: 150,
+      complete: function() {
+        return $('.is-added').removeClass('is-added');
+      }
+    });
+  };
+
+  addResponseCard = function() {
+    $('.ChatWindow-inner').append('<div class="ResponseCard js-responseCard is-added" style="opacity: 0"> <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div> <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div> <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div> </div>');
+    $('.ChatWindow').animate({
+      scrollTop: $('.ChatWindow').prop("scrollHeight")
+    }, 500);
+    $.Velocity.hook($('.is-added'), 'translateY', '0.5rem');
+    $.Velocity.hook($('.is-added'), 'opacity', '0');
+    return $('.is-added').velocity({
+      opacity: 1,
+      translateY: [0, [500, 20]]
+    }, {
+      delay: 550,
+      complete: function() {
+        $(this).attr('style', '');
+        return $('.is-added').removeClass('is-added');
+      }
+    });
+  };
+
+}).call(this);
+
+</script>

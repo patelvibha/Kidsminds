@@ -3,9 +3,30 @@
 <head>
 <title>Page Title</title>
 </head>
-<body>
+<div class="container">
+    <form onsubmit="sendEMail(); reset(); return false;">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="phone" placeholder="Phone No" required>
+        <textarea id="message" rows="4" placeholder="type your message here.."></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
 
-<h1>My contact page</h1>
-
-</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendEMail() {
+        Email.send({
+            host: "smtp.gmail.com",
+            username : "patelvibha4495@gmail.com",
+            To : "vibha@vasave.uk",
+            From : document.getElementById("name").value,
+            Subject : "contact Form Enquiry",
+            Body : "Name :" + document.getElementById("name").value
+            + "<br>  Phone No :" + document.getElementById("phone").value
+            + "<br> Message :" + document.getElementById("message").value
+        }).then(
+            message => alert("Message Sent Succesfully")
+        );
+ }
+</script>
 </html>

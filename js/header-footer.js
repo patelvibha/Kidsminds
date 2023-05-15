@@ -7,22 +7,23 @@ class Myheader extends HTMLElement {
       
       <!-- ======= Header ======= -->
       <header id="header" class="header">
-      <div class="top-header container d-flex">
-        <div class="text-left contact-info">
-          <a href="tel:44 02034886800"><i class="bi bi-telephone icon"></i><span>+44 020 3488 6800</span></a>
-  
-          <a href="mailto:enquiries@kidsminds.co.uk"><span id="et-info-email">enquiries@kidsminds.co.uk</span></a>
-        </div>
-        
+      <div class="container-fluid top-header">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="text-left contact-info">
+          <a class="Email" href="mailto:enquiries@kidsminds.co.uk"><i class="bi bi-envelope-at"></i><span id="et-info-email">enquiries@kidsminds.co.uk</span></a>
+          <a class="Phone" href="tel:44 02034886800"><i class="bi bi-phone icon"></i><span>+44 0000000000</span></a>         
+          </div>
+          
           <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        
+          </div>
+    
         </div>
-  
       </div>
+     
         <div class="container d-flex align-items-center justify-content-between">
     
           <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
@@ -74,7 +75,7 @@ class Myheader extends HTMLElement {
           <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     
         </div>
-      </header><!-- End Header -->      
+      </header><!-- End Header -->   
       `;
     }
   }

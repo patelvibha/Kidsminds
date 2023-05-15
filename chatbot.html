@@ -31,10 +31,7 @@
 </head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
-
-
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 
 <div class="botIcon">
 	<div class="botIconContainer">
@@ -44,24 +41,29 @@
 	</div>
 
     <div class="ChatWindow">   
-    <div class="ChatWindow-inner">      
-      <div class="ChatItem ChatItem--customer">
-        <div class="ChatItem-meta">
-          <div class="ChatItem-avatar">
-            <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+      <div class="ChatWindow_header">
+				<h4 class="ChatWindow_prompt">How can we help you?</h4> <span class="chat_close_icon"><i class="bi bi-x"></i></span>
+			</div>
+    <div class="ChatWindow-inner">  
+      <div class="chatinner-message">
+        <div class="ChatItem ChatItem--customer">
+          <div class="ChatItem-meta">
+            <div class="ChatItem-avatar">
+              <img class="ChatItem-avatarImage" src="img/avatarwomen.png">
+            </div>
+          </div>
+          <div class="ChatItem-chatContent">
+            <div class="ChatItem-chatText">Hii.. there how can i help you?</div>
+            <div class="ChatItem-timeStamp"><strong>KidsMinds</strong> • Today 05:49</div>
           </div>
         </div>
-        <div class="ChatItem-chatContent">
-          <div class="ChatItem-chatText">sound isnt working on my phone anymore</div>
-          <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div>
+        <div class="ResponseCard js-responseCard" style="opacity: 0">
+          <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div>
+          <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div>
+          <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div>
         </div>
-      </div>
-  
-      <div class="ResponseCard js-responseCard" style="opacity: 0">
-        <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div>
-        <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div>
-        <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div>
-      </div>
+      </div>     
+     
     </div>
   </div>
 
@@ -158,9 +160,9 @@
       }
     });
   };
-
+ 
   addExpertMessage = function(message) {
-    $('.ChatWindow-inner').append('<div class="ChatItem ChatItem--expert is-added" style="opacity: 0;"> <div class="ChatItem-chatContent"> <div class="ChatItem-chatText">' + message + '</div> <div class="ChatItem-timeStamp"><strong>Me</strong> · Today 05:49</div> </div> </div>');
+    $('.chatinner-message').append('<div class="ChatItem ChatItem--expert is-added" style="opacity: 0;">  <div class="ChatItem-meta"><div class="ChatItem-avatar"><img class="ChatItem-avatarImage" src="img/avatarwomen.png"></div></div><div class="ChatItem-chatContent"> <div class="ChatItem-chatText">' + message + '</div> <div class="ChatItem-timeStamp"><strong>Me</strong> · Today 05:49</div> </div> </div>');
     $('.ChatWindow').animate({
       scrollTop: $('.ChatWindow').prop("scrollHeight")
     }, 500);
@@ -176,7 +178,7 @@
   };
 
   addCustomerMessage = () => {
-    $('.ChatWindow-inner').append('<div class="ChatItem ChatItem--customer is-added" style="opacity: 0;"> <div class="ChatItem-meta"> <div class="ChatItem-avatar"> <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png"> </div> </div> <div class="ChatItem-chatContent"> <div class="MessageLoading"> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> </div> </div> </div>');
+    $('.chatinner-message').append('<div class="ChatItem ChatItem--customer is-added" style="opacity: 0;"> <div class="ChatItem-meta"> <div class="ChatItem-avatar"> <img class="ChatItem-avatarImage" src="img/avatarwomen.png"> </div> </div> <div class="ChatItem-chatContent"> <div class="MessageLoading"> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> <div class="MessageLoading-dot"></div> </div> </div> </div>');
     $('.ChatWindow').animate({
       scrollTop: $('.ChatWindow').prop("scrollHeight")
     }, 500);
@@ -196,7 +198,7 @@
     randomMessage = new Array("i think that helps me but how do i navigate to that setting?", "ok thx i'll try that", "i don't even know", "hold on i have to tell my husband to be quiet", "is this tray that pops out of my desktop computer a cup holder? hold one let me try it", "i have the hiccups, do you know a cure", "you ask a lot of questions", "give me a sec let me check");
     randomPick = randomMessage[Math.floor(Math.random() * randomMessage.length)];
     $('.is-added .MessageLoading').remove();
-    $('.is-added .ChatItem-chatContent').append('<div class="RealMessage" style="opacity:0;"> <div class="ChatItem-chatText">' + randomPick + '</div> <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div> </div>');
+    $('.is-added .ChatItem-chatContent').append('<div class="RealMessage" style="opacity:0;"> <div class="ChatItem-chatText">' + randomPick + '</div> <div class="ChatItem-timeStamp"><strong>KidsMinds</strong> • Today 05:49</div> </div>');
     $('.ChatWindow').animate({
       scrollTop: $('.ChatWindow').prop("scrollHeight")
     }, 500);
@@ -211,7 +213,7 @@
   };
 
   addResponseCard = function() {
-    $('.ChatWindow-inner').append('<div class="ResponseCard js-responseCard is-added" style="opacity: 0"> <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div> <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div> <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div> </div>');
+    $('.chatinner-message').append('<div class="ResponseCard js-responseCard is-added" style="opacity: 0"> <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div> <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div> <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div> </div>');
     $('.ChatWindow').animate({
       scrollTop: $('.ChatWindow').prop("scrollHeight")
     }, 500);

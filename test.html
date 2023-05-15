@@ -1,0 +1,76 @@
+<div class="formWrap">
+	<form id="localStorageTest" method="post" action="">
+	    <label>Question 1</label><br>
+	    <input type="text" name="q0" id="q0" class="q" value="" /><br>
+	    <label>Question 2</label><br>
+	    <input type="text" name="q1" id="q1" class="q" value="" /><br>
+		<input type="file" id="myFile" name="filename">
+		
+		
+		<button type="button" id="store" onclick="submitdata()">Store Items</button>
+		<button type="button" id="retrieve">Get Items</button>
+    <button type="button" id="clear">Clear Items</button>
+	</form>
+</div>
+<script>
+	var stbt = document.getElementById("store");
+stbt.addEventListener("click", storeIt, false);
+
+var rtbt = document.getElementById("retrieve");
+rtbt.addEventListener("click", retrieve, false);
+
+var clbt = document.getElementById("clear");
+clbt.addEventListener("click", clear, true);
+
+var elv = document.getElementsByClassName('q');
+
+const imgPath = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+        
+        localStorage.setItem("myFile", reader.result);
+    }, false);
+
+    if (imgPath) {
+        reader.readAsDataURL(imgPath);
+    }
+
+	function submitdata(){
+		window.location.href ="test1.html"; 
+	};
+
+     
+
+function storeIt() {
+  for (var i = 0; i < elv.length; i++) {
+    var theVal = elv[i].value;
+    if(theVal == '') { 
+      alert("Enter content, or you will save empty stings."); 
+      return false; 
+    }
+    var storeName = elv[i].className + [i];
+    localStorage.setItem(storeName, theVal);
+  }
+  alert("You've stored items. Refresh and click 'Get Items' to re-populate the fields.");
+}
+
+function retrieve() {
+  if (!window.localStorage.length) { alert("Nothing stored!"); }
+  for (var i = 0; i < localStorage.length; i++){
+   // var obj = localStorage.getItem(localStorage.key(i));
+    document.getElementById('q'+[i]).value = localStorage.getItem('q'+[i]);
+  }
+}
+function clear() {
+  if(!window.localStorage.length) {
+    alert("Local storage is empty.");
+  }
+  localStorage.clear();
+  var vlu = document.getElementsByClassName('q');
+  for (var i = 0; i < vlu.length; i++){
+    vlu[i].value = '';
+  }
+}
+
+</script>

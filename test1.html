@@ -1,16 +1,16 @@
 
-<div>First name: <span id="firstname"></span></div>
-<div>Last Namr:<span id="surname"></span></div>
+<div>First name: <span id="q0"></span></div>
+<div>Last Namr:<span id="q1"></span></div>
 <img id="myFile"/>
 
 
 <script>
   
- const firstname = localStorage.getItem('firstname');
- const surname = localStorage.getItem('surname');
+ const firstname = localStorage.getItem('q0');
+ const surname = localStorage.getItem('q1');
 
- document.getElementById('firstname').textContent = firstname;
- document.getElementById('surname').textContent = surname;
+ document.getElementById('q0').textContent = firstname;
+ document.getElementById('q1').textContent = surname;
 
  const img = document.getElementById('myFile');
  img.src = localStorage.getItem('myFile');

@@ -10,6 +10,11 @@
     --color-default: #212529;
     --color-primary: #00AEEF;
     --color-secondary: #EE2A7B;
+    --color-primary-light: #eee;
+    --color-white: #fff;
+    --body-font: 14px;
+    --font-xs: 12px;
+    --font-xxs: 10px;
   }
   /* Smooth scroll behavior */
   :root {
@@ -22,6 +27,7 @@
   body {
     font-family: var(--font-default);
     color: var(--color-default);
+    font-size: var(--body-font);
   }
   
   a {
@@ -42,7 +48,7 @@
   h6 {
     font-family: var(--font-secondary);
   }
-  
+  .backgroud-light{background-color: var(--color-primary-light);}
   /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
@@ -50,13 +56,33 @@
   
   .top-header
   {
-    flex-direction: row;
-    justify-content: space-between;
     border-bottom: 1px solid #21252914;
     padding: 8px 0;
     margin-bottom: 8px;
   }
+  .top-header
+  .top-header .contact-info{line-height: 30px;}
+  .top-header .Email,  .top-header .Phone
+  { 
+    padding-right: 30px;
+    font-size: 14px;
+    color: gray;
+    position: relative;
+  }
+  .top-header .Email::after{
+    content: "";
+    border-right: 1px solid var(--color-default);
+    position: absolute;
+    right: 10px;
+    height: 75%;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
+  }
+  .top-header .Email i, .top-header .Phone i{padding-right: 5px;
+    color: var(--color-primary);
+    font-size: 14px;}
   .header .social-links a {
     display: flex;
     align-items: center;
@@ -87,8 +113,14 @@
   }
   
   .section-header {
-    text-align: center;
+    
     padding-bottom: 30px;
+  }
+  .highlight-content
+  {
+    color: var(--bs-blue);
+    font-size: 16px;
+    font-family: cursive;
   }
   
   .section-header h2 {
@@ -104,7 +136,7 @@
   
   .section-header p {
     margin: 0;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 600;
     font-family: var(--font-primary);
   }
@@ -236,7 +268,7 @@
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    height: 130px;
+    height: 115px;
     border-bottom: 1px solid #fff;
   }
   
@@ -1213,7 +1245,7 @@
     }
   
     .gallery .swiper-slide-active {
-      border: 6px solid var(--color-primary);
+      /* border: 1px solid var(--color-primary); */
       padding: 4px;
       background: #fff;
       z-index: 1;
@@ -1542,75 +1574,95 @@
 /* ---------------------------------------- */
 /*            Chatbot Css                   */
 /* ---------------------------------------- */
-
-
-.ChatWindow {
+.botIcon 
+{
+  display: block;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  box-shadow: 5px 0 20px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  color: #fff;
-  height: 500px;
+
   max-height: 500px;
   max-width: 300px;
   overflow: hidden;
-  -webkit-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
-  -ms-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
-  transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1.1), border-radius 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), background-color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1), color 0ms cubic-bezier(0.25, 0.25, 0.5, 1.1);
   width: 100%;
-}
-.botIcon .Layout {
-  -webkit-animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
-  -ms-animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
-  animation: appear 0.15s cubic-bezier(0.25, 0.25, 0.5, 1.1);
-  -webkit-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  background-color: rgb(63, 81, 181);
-  bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 0 20px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: content-box !important;
-  color: rgb(255, 255, 255);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  max-height: 30px;
-  max-width: 300px;
-  min-width: 50px;
-  opacity: 0;
-  pointer-events: auto;
-  position: fixed;
-  -webkit-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
-  -ms-transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
-  transition: right 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), bottom 0.1s cubic-bezier(0.25, 0.25, 0.5, 1), min-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-width 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), min-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), max-height 0.2s cubic-bezier(0.25, 0.25, 0.5, 1), border-radius 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, background-color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s, color 50ms cubic-bezier(0.25, 0.25, 0.5, 1) 0.15s;
-  z-index: 999999999;
+  z-index: 9;
 }
 
-.ChatWindow-inner {
+.botIcon .ChatWindow {
+  position:relative;
+  height: 500px;
+  
+}
+.botIcon  .ChatWindow-inner {
+background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    height: 500px;
+    z-index: -1;
+}
+.botIcon .ChatWindow .chatinner-message
+{
+  background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.botIcon .ChatWindow
+{
+  display: none;
+}
+.botIcon.showBotSubject .ChatWindow
+{
+  display: block;
+}
+.botIcon .ChatWindow_header
+{
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 100%;
+  background-color: var(--color-default);
+  justify-content: space-between;
+  padding: 10px;
+  z-index: 999;
+      z-index: 999;
+    position: fixed;
+    width: 300px;
+}
+.botIcon .ChatWindow_header .ChatWindow_prompt{
+ 
+    color: var(--color-white);
+    font-size: var(--body-font);
+    margin: 0;
+}
+.botIcon .ChatWindow_header .chat_close_icon {
+  color: var(--color-white);
+  cursor: pointer;
+ 
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e0dfdf;
 }
 
 .ResponseCard {
-  flex: 0 0 auto;
-  margin-bottom: 2rem;
+  margin: 0px 20px 60px 20px;
   border: 1px solid #DAE8F4;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 86, 163, 0.1);
   line-height: 1.3;
-  transition: all 0.1s;
-  transform-origin: center center;
 }
 
 .ResponseCard:hover {
@@ -1619,12 +1671,13 @@
 }
 
 .ResponseCard-option {
-  padding: 1rem;
+  padding: 10px;
   border-top: 1px solid #DAE8F4;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
   color: #333;
   transition: none;
+  font-size: var(--font-xs);
 }
 .ResponseCard-option:hover {
   background: #f5f5f5;
@@ -1644,7 +1697,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding: 10px;
 }
 
 .ChatItem--expert {
@@ -1666,7 +1720,6 @@
 
 .ChatItem-chatContent {
   position: relative;
-  flex: 1 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1698,8 +1751,8 @@
 }
 
 .ChatItem-timeStamp {
-  width: 70%;
-  font-size: 0.875rem;
+  width: auto;
+  font-size: var(--font-xxs);
   color: #666;
 }
 .ChatItem--expert .ChatItem-timeStamp {
@@ -1745,21 +1798,23 @@
 
 .ChatItem-chatText {
   position: relative;
-  width: 70%;
+  width: 100%;
   flex: 0 1 auto;
   margin-bottom: 0.5rem;
-  padding: 1rem;
-  background: #007FEF;
-  color: #fff;
+  padding: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.175);
   line-height: 1.3;
+  font-size: var(--font-xs);
 }
 .ChatItem--expert .ChatItem-chatText {
   margin-left: auto;
   border: 1px solid #dbdbdb;
-  background: white;
+  background: var(--color-white);
   color: #666;
+  margin-right: 20px;
 }
 
 .ChatItem-chatText > div {
@@ -1818,10 +1873,10 @@
   transform: translateY(-50%);
   border: none;
   border-radius: 8px;
-  background: #007FEF;
+  background: var(--color-primary);
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  color: white;
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -1835,5 +1890,6 @@
     opacity: 0;
   }
 }
-.botIcon .iconInner{bottom: 15px;right: 15px;position: fixed;z-index: 9999;cursor: pointer;}
-.botIcon i{font-size: 50px; color: var(--color-primary);}
+.botIcon .iconInner{bottom: 40px;right: 50px;position: fixed;z-index: -1;cursor: pointer;}
+.botIcon .iconInner i{font-size: 50px; color: var(--color-primary);}
+.section-activity .section-header{text-align: left;}

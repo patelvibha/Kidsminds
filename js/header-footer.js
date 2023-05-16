@@ -90,68 +90,67 @@ class Myfooter extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
       <!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-
-  <div class="container">
-    <div class="row gy-3">
-      <div class="col-lg-3 col-md-6 d-flex">
-        <i class="bi bi-geo-alt icon"></i>
-        <div>
-          <h4>Address</h4>
-          <p>
-            A108 Adam Street <br>
-            United Kingdom, NY 535022 - US<br>
-          </p>
-        </div>
-
-      </div>
-
-      <div class="col-lg-3 col-md-6 footer-links d-flex">
-        <i class="bi bi-telephone icon"></i>
-        <div>
-          <h4>contacts</h4>
-          <p>
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 footer-links d-flex">
-        <i class="bi bi-clock icon"></i>
-        <div>
-          <h4>Opening Hours</h4>
-          <p>
-            <strong>Mon-Sat: 11AM</strong> - 23PM<br>
-            Sunday: Closed
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Follow Us</h4>
-        <div class="social-links d-flex">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Kidsminds</span></strong>. All Rights Reserved
-    </div>
-    
-  </div>
-
-</footer>
-<!-- End Footer -->
-
-
+      <footer id="footer" class="footer">
+     
+       <div class="container">
+         <div class="row gy-3">
+     
+           <div class="col-lg-3 col-md-6 d-flex">        
+             <div class="footer-logo">
+               <img src="../img/logo.svg" alt="" height="80px">
+               <p>We’re on a mission to find every family flourish. creates awesome mini-humans, puts emotional wellbeing first, is easy to arrange, and doesn’t cost the earth.</p>
+             </div>
+           </div>
+     
+           <div class="col-lg-3 col-md-6 footer-contact footer-links d-flex">       
+             <div>
+               <h4>Contact us</h4>
+               <ul>
+                 <li><i class="bi bi-geo-fill"></i> <p class="pr-5">A108 Adamn Street, Wolky ways, 535022 - UK</p></li>
+                 <li><i class="bi bi-telephone"></i><p>+44 1234567890</p></li>
+                 <li><i class="bi bi-envelope-at"></i><p>kidsminds@help.uk</p></li>
+                 <li><i class="pt-1 bi bi-clock icon"></i><div><p>Mon-Sat : 11AM - 18PM</p> <p>Sunday : Closed</p></div></li>
+               </ul>      
+             </div>
+           </div>
+     
+           <div class="col-lg-3 col-md-6 footer-links d-flex">       
+             <div>
+               <h4>Quick Links</h4>
+               <ul>
+                 <li><i class="bi bi-chevron-right"></i><a href="about-us.html">About Us</a></li>
+                 <li><i class="bi bi-chevron-right"></i><a href="career.html">career</a></li>
+                 <li><i class="bi bi-chevron-right"></i><a href="blog.html">Blog</a></li>
+                 <li><i class="bi bi-chevron-right"></i><a href="privacy_policy.html">privacy policy</a></li>
+                 <li><i class="bi bi-chevron-right"></i><a href="support.html">Support</a></li>
+     
+               </ul>          
+             </div>
+           </div>
+         
+     
+           <div class="col-lg-3 col-md-6 footer-links">
+             <h4>Follow Us</h4>
+             <div class="social-links d-flex">
+               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+             </div>
+           </div>
+     
+         </div>
+       </div>
+     
+       <div class="container">
+         <div class="copyright">
+           &copy; Copyright <span>KidsMinds.uk</span>. All Rights Reserved
+         </div>
+         
+       </div>
+     
+     </footer>
+     <!-- End Footer -->
       
       `;
     }

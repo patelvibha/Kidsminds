@@ -1924,3 +1924,10 @@ background-color: #fff;
   float: right;
   width: calc(100% - 80px);
 }
+#image-56-513 {
+  height: 100px;
+  border-radius: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+

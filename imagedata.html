@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Example</title>
+    <script>
+      function encodeImageFileAsURL(event) {
+        var fileInput = event.target;
+        var files = fileInput.files;
+        if (files && files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            var imgElement = document.getElementById("imageElement");
+            imgElement.src = e.target.result;
+            localStorage.setItem("imageData"," ");
+            localStorage.setItem("imageData", e.target.result);
+          };
+          reader.readAsDataURL(files[0]);
+        }
+      }
+
+      function loadImageFromLocalStorage() {
+        var imageData = localStorage.getItem("imageData");
+        if (imageData) {
+          var imgElement = document.getElementById("imageElement");
+          imgElement.src = imageData;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Local Storage Example</h1>
+    <input type="file" id="imageFile" onchange="encodeImageFileAsURL(event)" >
+   
+    <br>
+    <br>
+    <img id="imageElement" src="" alt="Stored Image" height="10%" width="10%"> 
+    <br>
+    <br>
+    <button onclick="loadImageFromLocalStorage()">Load Image from Local Storage</button>
+  </body>
+</html>

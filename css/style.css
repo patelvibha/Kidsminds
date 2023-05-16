@@ -1939,17 +1939,14 @@ background-color: #fff;
 
 <<<<<<< HEAD
 
-*, body {
-  margin: 0;
-  padding: 0;
-}
-.flex {
+
+.blog_section .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.content {
+.blog_section .content {
   height: 100px;
   width: 100%;
   /* color: #fff; */
@@ -1962,7 +1959,7 @@ background-color: #fff;
   display: none;
   overflow: hidden;
 }
-#loadMore {
+.blog_section #loadMore {
   width: 200px;
   color: #fff;
   display: block;
@@ -1974,13 +1971,13 @@ background-color: #fff;
   background-color: blue;
   transition: .3s;
 }
-#loadMore:hover {
+.blog_section #loadMore:hover {
   color: blue;
   background-color: #fff;
   border: 1px solid blue;
   text-decoration: none;
 }
-.noContent {
+.blog_section .noContent {
   color: #000 !important;
   background-color: transparent !important;
   pointer-events: none;

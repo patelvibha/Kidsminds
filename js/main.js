@@ -238,16 +238,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --------------------load more content js start
 
-$(document).ready(function(){
-  $(".content").slice(0, 2).show();
-  $("#loadMore").on("click", function(e){
-    e.preventDefault();
-    $(".content:hidden").slice(0, 1).slideDown();
-    if($(".content:hidden").length == 0) {
-      $("#loadMore").text("End").addClass("noContent");
-    }
-  });
+// $(document).ready(function(){
+//   $(".content").slice(0, 2).show();
+//   $("#loadMore").on("click", function(e){
+//     e.preventDefault();
+//     $(".content:hidden").slice(0, 1).slideDown();
+//     if($(".content:hidden").length == 0) {
+//       $("#loadMore").text("No Content").addClass("noContent");
+//     }
+//   });
   
-})
+// })
 
 // --------------------load more content js end
+
+
+// show more js 
+// $(document).ready(function(){
+// $(".show-more a").on("click", function() {
+//   var $this = $(this); 
+//   var $content = $this.parent().prev("div.content");
+//   var linkText = $this.text().toUpperCase();    
+  
+//   if(linkText === "SHOW MORE"){
+//       linkText = "Show less";
+//       $content.switchClass("hideContent", "showContent", 400);
+//   } else {
+//       linkText = "Show more";
+//       $content.switchClass("showContent", "hideContent", 400);
+//   };
+
+//   $this.text(linkText);
+// });
+// })

@@ -1985,3 +1985,90 @@ background-color: #fff;
 }
 
 >>>>>>> 9476ab88e069c263892882f18102d3ec78f2e3c7
+
+
+
+.section-about-us {
+  margin-bottom: 40px;
+}
+.section-block .container.bg-white {
+  border-radius: 6px;
+}
+.flex-md-row {
+  .col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+  -ms-flex-direction: row!important;
+  flex-direction: row!important;
+}
+.col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+.col-md-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+.text-center {
+  text-align: center!important;
+}
+.script-font {
+  font-family: 'Kalam', cursive !important;
+}
+.script-font-35 {
+  font-size: 35px;
+}
+
+.script-font {
+  font-family: 'Kalam', cursive !important;
+}
+.text-center {
+  text-align: center!important;
+}
+
+element.style {
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-sm-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.section-features-benefits .carousel-inner .single-item {
+  width: calc(33.33% - 14px);
+  margin-right: 20px;
+  float: left;
+  display: inline-block;
+  height: 235px;
+  border-radius: 6px;
+  background-color: lightgrey;
+  position: relative;
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+}
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.script-font {
+  font-family: "Kalam", cursive !important;
+}

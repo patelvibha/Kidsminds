@@ -5,6 +5,7 @@
     --font-secondary: "Inter", sans-serif;
   }
   
+  
   /* Colors */
   :root {
     --color-default: #212529;
@@ -38,7 +39,7 @@
   }
   
   a:hover {
-    color: #ec2727;
+    color: var(--color-secondary);
     text-decoration: none;
   }
   
@@ -52,6 +53,16 @@
   }
   .backgroud-light{background-color: var(--section-bg);}
   .secondary-color{color: var(--color-secondary);}
+  .primary-button{    
+    background: var(--color-primary);
+    border: none;
+    padding: 12px 30px;
+    color: var(--color-white);
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 50px;
+    border-bottom: 5px dotted blue;text-transform: uppercase;}
+    .primary-button:hover{    border-bottom: 5px dotted var(--color-secondary);color: var(--color-white);}
   /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
@@ -154,24 +165,44 @@
   # Breadcrumbs
   --------------------------------------------------------------*/
   .breadcrumbs {
-    padding: 15px 0;
-    background: rgba(55, 55, 63, 0.05);
-    margin-top: 90px;
+    padding: 100px 0;
+    background-image: url(../img/breadcum.jpg);
+    margin-top: 10px;
+    background-size: cover;
+    background-position: center left;
+    position: relative;
   }
-  
+  .breadcrumbs::after {
+    content: "";
+    background: #903f988a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
   .breadcrumbs h2 {
-    font-size: 24px;
+    font-family: var(--font-primary);
+    font-size: 38px;
     font-weight: 400;
     margin: 0;
+    padding-bottom: 20px;
+    color: var(--color-white);
   }
   
   .breadcrumbs ol {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 14px;
+  }
+  .breadcrumbs .active
+  {
+    color: var(--color-secondary);
   }
   
   .breadcrumbs ol li+li {
@@ -181,7 +212,7 @@
   .breadcrumbs ol li+li::before {
     display: inline-block;
     padding-right: 10px;
-    color: #676775;
+    color: var(--color-primary);
     content: "/";
   }
   
@@ -300,26 +331,10 @@
     color: var(--color-primary);
   }
   
-  .header .btn-signin,
-  .header .btn-signin:focus {
-    font-size: 14px;
-    color: #fff;
-    background: var(--color-primary);
-    padding: 8px 20px;
-    margin-left: 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-  }
-  
-  .header .btn-signin:hover,
-  .header .btn-signin:focus:hover {
-    color: var(--color-white);
-    background: var(--color-secondary);
-  }
-  
   section {
     scroll-margin-top: 90px;
   }
+  .btn-signin{padding: 8px 30px;}
   
   /*--------------------------------------------------------------
   # Desktop Navigation
@@ -1244,20 +1259,7 @@
     text-align: center;
   }
   
-  @media (min-width: 992px) {
-    .gallery .swiper-wrapper {
-      padding: 40px 0;
-    }
-  
-    .gallery .swiper-slide-active {
-      /* border: 1px solid var(--color-primary); */
-      padding: 4px;
-      background: #fff;
-      z-index: 1;
-      transform: scale(1.2);
-    }
-  }
-  
+
   /*--------------------------------------------------------------
   # Contact Section
   --------------------------------------------------------------*/
@@ -1310,7 +1312,7 @@
     color: var(--color-primary);
   }
   
-  .contact .email-form {
+  .form-design .email-form {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1318,11 +1320,11 @@
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
   }
   
-  .contact .email-form .form-group {
+  .form-design .email-form .form-group {
     padding-bottom: 20px;
   }
   
-  .contact .email-form .error-message {
+  .form-design .email-form .error-message {
     display: none;
     color: #fff;
     background: #df1529;
@@ -1331,11 +1333,11 @@
     font-weight: 600;
   }
   
-  .contact .email-form .error-message br+br {
+  .form-design .email-form .error-message br+br {
     margin-top: 25px;
   }
   
-  .contact .email-form .sent-message {
+  .form-design .email-form .sent-message {
     display: none;
     color: #fff;
     background: #059652;
@@ -1344,14 +1346,14 @@
     font-weight: 600;
   }
   
-  .contact .email-form .loading {
+  .form-design .email-form .loading {
     display: none;
     background: #fff;
     text-align: center;
     padding: 15px;
   }
   
-  .contact .email-form .loading:before {
+  .form-design .email-form .loading:before {
     content: "";
     display: inline-block;
     border-radius: 50%;
@@ -1363,39 +1365,27 @@
     animation: animate-loading 1s linear infinite;
   }
   
-  .contact .email-form input,
-  .contact .email-form textarea {
+  .form-design .email-form input,
+  .form-design .email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
   }
   
-  .contact .email-form input:focus,
-  .contact .email-form textarea:focus {
+  .form-design .email-form input:focus,
+  .form-design .email-form textarea:focus {
     border-color: var(--color-primary);
   }
   
-  .contact .email-form input {
+  .form-design .email-form input {
     height: 48px;
   }
   
-  .contact .email-form textarea {
+  .form-design .email-form textarea {
     padding: 10px 12px;
   }
   
-  .contact .email-form button[type=submit] {
-    background: var(--color-primary);
-    border: 0;
-    padding: 12px 40px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-  }
-  
-  .contact .email-form button[type=submit]:hover {
-    background: #ec2727;
-  }
-  
+
   @keyframes animate-loading {
     0% {
       transform: rotate(0deg);
@@ -1413,17 +1403,19 @@
     width: 100%;
     background-size: cover;
     position: relative;
-    /* min-height: 60vh; */
-    padding: 80px 0 60px 0;
-    background-image: url("../img/hero.jpg") ;
+    min-height: 100vh;
+    /* padding: 80px 0 60px 0; */
+    background-image: url("../img/hero.png") ;
   }
   
+  
   .hero h2 {
-    font-size: 64px;
+    font-size: 45px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--color-default);
+    color: var(--color-primary-dark);
     font-family: var(--font-primary);
+    padding-right: 60px;
   }
   
   .hero h2 span {
@@ -1431,28 +1423,12 @@
   }
   
   .hero p {
-    color: #4f4f5a;
+    color: var(--color-default);
     font-weight: 400;
     margin-bottom: 30px;
   }
   
-  .hero .btn-signin {
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 12px 36px;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #fff;
-    background: var(--color-primary);
-    box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
-  }
-  
-  .hero .btn-signin:hover {
-    background: rgba(206, 18, 18, 0.8);
-    box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
-  }
+
   
   .hero .btn-watch-video {
     font-size: 16px;

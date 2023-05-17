@@ -70,7 +70,7 @@ class Myheader extends HTMLElement {
             </ul>
           </nav><!-- .navbar -->
     
-          <a class="btn-signin" href="#join-us">Join Us</a>
+          <a class="btn-signin primary-button" href="#join-us">Join Us</a>
           <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
           <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     

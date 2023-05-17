@@ -64,7 +64,7 @@ class Myheader extends HTMLElement {
               <li><a href="">local authority</a></li>
     
               <li><a href="#contact">Career</a></li>
-              <li><a href="blog.html">Blog</a></li>
+              <li><a href="blog.html">Blog </a></li>
               <li><a href="#contact">Support</a></li>
               <li><a href="contact-us.html">Contact</a></li>
             </ul>

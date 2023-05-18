@@ -2134,3 +2134,5 @@ position: relative;
 .circle-list{list-style-type: circle;}
 .circle-list li{padding: 10px 0;}
 .list-style-number{list-style-type: decimal;}
+.disclaimer p{font-weight: 600;}
+.disclaimer{  padding-bottom: 40px;}

@@ -43,6 +43,9 @@
         <li>
           <a href="index.html">Home</a>
         </li>
+        <li>
+          <a href="our-nursery.html">Our Nursery</a>
+        </li>
         <li class="active">Registration Form</li>
       </ol>
     </div>
@@ -56,7 +59,7 @@
             <form action="" method="post" role="form" class="email-form p-3 p-md-4 mt-0">
               
                 <div class="row">
-                  <div class="section-header text-left">
+                  <div class="section-header text-center">
                     <p><span> Childern Information</span>
                     </p>
                   </div>                  
@@ -120,49 +123,84 @@
                     </div>
                       <hr>
                     <div class="row">
-                      <div class="section-header text-left">
+                      <div class="section-header text-left small">
                         <p><span>Hours of child care required</span> </p>
                         <div>(school hourse are 7:00AM to 6:00PM)</div>
                       </div>
                       
                       <div class="col-xl-6 form-group">
-                        
-                        <input type="radio" id="fullday" name="fullday"  value="fullday" placeholder="fullday" required><label>Full Day</label><br>
-                        
-                        <input type="radio" id="half_day_morning" name="half_day_morning"  value="half_day_morning" placeholder="half_day_morning" required><label>half day morning</label><br>
-                        
-                        <input type="radio" id="half_day_afternoon" name="half_day_afternoon"  value="half_day_afternoon" placeholder="half_day_afternoon" required><label>half day afternoon</label><br>
-                        
-                        <input type="radio" id="other" name="other"  value="other" placeholder="other" required><label>other</label><br>
+
+                    
+                          <div class="radio">
+                            <input type="radio" id="fullday" name="radio-group" checked>
+                            <label for="fullday">Full Day</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="half_day_morning" name="radio-group">
+                            <label for="half_day_morning">Half day morning</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="half_day_afternoon" name="radio-group">
+                            <label for="half_day_afternoon">Half day afternoon</label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" id="other" name="radio-group">
+                            <label for="other">Other</label>
+                          </div>                     
                       </div>
                     </div>
-                    <div class="row">
-                      <h2 class="section-header text-left">Day of week required </h2>
-                      <div class="col-xl-6 form-group">
-                        <label>Monday</label>
-                        <input type="checkbox" name="days" value="monday">
-                        <label>Tuesday</label>
-                        <input type="checkbox" name="days" value="tuesday">
-                        <label>Wednesday</label>
-                        <input type="checkbox" name="days" value="wednesday">
-                        <label>Thursday</label>
-                        <input type="checkbox" name="days" value="thursday">
-                        <label>Friday</label>
-                        <input type="checkbox" name="days" value="friday">
+                    <hr>
+                    <div class="row"> 
+                      <div class="section-header text-left small">
+                        <p><span>Day of week required</span> </p>
                       </div>
-                    </div>
-                    <div class="row">
-                      <h2 class="section-header text-left">Do you required before or after school care?</h2>
                       <div class="col-xl-6 form-group">
-                        <label>Before School</label>
+                        <div class="checkbox">
+                          <input type="checkbox" name="days" value="monday">
+                          <label>Monday</label>
+                        </div> 
+                        
+                        <div class="checkbox">
+                          <input type="checkbox" name="days" value="tuesday">
+                          <label>Tuesday</label>
+                        </div>
+
+                        <div class="checkbox">
+                          <input type="checkbox" name="days" value="wednesday">
+                          <label>wednesday</label>
+                        </div>
+
+                        <div class="checkbox">
+                          <input type="checkbox" name="days" value="thursday">
+                          <label>Thursday</label>
+                        </div>
+
+                        <div class="checkbox">
+                          <input type="checkbox" name="days" value="friday">
+                          <label>Friday</label>
+                        </div>
+                        
+                       </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                      <div class="section-header text-left small">
+                        <p><span>Do you required before or after school care?</span> </p>
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" name="before_school" value="before_school">
-                        <label>After School</label>
+                        <label>Before School</label>
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" name="after_school" value="after_school">
-                        
+                        <label>After School</label>
                       </div>
                     </div>
+                    <hr>
                     <div class="row">
-                      <h2 class="section-header text-left">Parents Information</h2>
+                      <div class="section-header text-center">
+                        <p><span>Parents Information</span> </p>
+                      </div>
                       <div class="col-xl-6 form-group">
                         <input type="text" name="pfname" class="form-control" id="fname" placeholder="First Name" required>
                       </div>
@@ -191,8 +229,11 @@
                         <input type="text" name="placeofwork" class="form-control" id="palceofwork" placeholder="Place of Work address" required>
                       </div>
                     </div>
+                    
                     <div class="row">
-                      <h2 class="section-header text-left">Emergency Contact Number:</h2>
+                      <div class="section-header text-left small">
+                        <p><span>Emergency Contact Number:</span> </p>
+                      </div>
                       <div class="col-xl-6 form-group">
                         <input type="text" name="efname" class="form-control" id="efname" placeholder="First Name" required>
                       </div>
@@ -221,7 +262,10 @@
                       </div>
                   
                     <div class="row">
-                      <h2 class="section-header text-left">Other people to authorized to pick up child from school:</h2>
+                      <div class="section-header text-left small">
+                        <p><span>Other people to authorized to pick up child from school:</span> </p>
+                      </div>
+                     
                       <div class="col-xl-6 form-group">
                         <input type="text" name="ofname" class="form-control" id="ofname" placeholder="First Name" required>
                       </div>
@@ -248,7 +292,9 @@
                         <input type="text" name="eplaceofwork" class="form-control" id="epalceofwork" placeholder="Place of Work address" required>
                       </div>
                       <div class="row">
-                        <h2 class="section-header text-left">Medical Information</h2>
+                        <div class="section-header text-left small">
+                          <p><span>Medical Information</span> </p>
+                        </div>
                         <div class="col-xl-6 form-group">
                           <input type="text" name="dfname" class="form-control" id="dfname" placeholder="Doctor First Name" required>
                         </div>
@@ -283,7 +329,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit" class="primary-button">Send Message</button></div>
+                <div class="text-center"><button type="submit" class="primary-button">SUBMIT</button></div>
               </form>
         </div>
         <div class="col-md-2"></div>

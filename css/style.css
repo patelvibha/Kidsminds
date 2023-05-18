@@ -61,7 +61,8 @@
     font-weight: 600;
     transition: 0.4s;
     border-radius: 50px;
-    border-bottom: 5px dotted blue;text-transform: uppercase;}
+    border-bottom: 5px solid var(--color-secondary);
+    text-transform: uppercase;}
     .primary-button:hover{    border-bottom: 5px dotted var(--color-secondary);color: var(--color-white);}
   /*--------------------------------------------------------------
   # Sections & Section Header
@@ -146,7 +147,8 @@
     font-family: var(--font-default);
     display: inline-block;
   }
-  
+  .section-header.small{padding-bottom: 20px;}
+  .section-header.small p{    font-size: 15px;font-weight: 500;}  
   .section-header p {
     margin: 0;
     font-size: 30px;
@@ -1382,8 +1384,14 @@
   .form-design .email-form textarea:focus {
     border-color: var(--color-primary);
   }
-  
+  .form-group .radio{padding-bottom: 8px;}
  
+ .form-group .radio label {
+  display: inline-block;
+  align-items: center;
+  vertical-align: text-bottom;
+  margin-left: 5px;
+ }
   .form-design .email-form textarea {
     padding: 10px 12px;
   }
@@ -1398,6 +1406,107 @@
       transform: rotate(360deg);
     }
   }
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+      color: #666;
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ddd;
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--color-primary);
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.form-group .checkbox
+{
+padding-bottom: 10px;
+}
+input[type=checkbox] {
+  position: relative;
+	border: 1px double var(--color-primary);
+	border-radius: 2px;
+	background: none;
+	cursor: pointer;
+	line-height: 0;
+	margin: 0 .6em 0 0;
+
+	padding: 0 !important;
+	vertical-align: text-top;
+	height: 20px;
+	width: 20px;
+	-webkit-appearance: none;
+  opacity: .5;
+}
+
+input[type=checkbox]:hover {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked {
+  background-color: var(--color-primary);
+  opacity: 1;
+  outline: 2px double var(--color-primary);
+}
+
+input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
   
   /*--------------------------------------------------------------
   # Hero Section

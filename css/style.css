@@ -63,7 +63,8 @@
     border-radius: 50px;
     border-bottom: 5px solid var(--color-secondary);
     text-transform: uppercase;}
-    .primary-button:hover{    border-bottom: 5px dotted var(--color-secondary);color: var(--color-white);}
+    .primary-button:hover{    border-bottom: 5px solid var(--color-secondary);color: var(--color-white);}
+    .color-primary{color:var(--color-primary)!important;}
   /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
@@ -2129,3 +2130,7 @@ position: relative;
   bottom: 0;
 }
 .section-activity:last-child::after{content:"";display: none;height:0;}
+.privacy-policy .card{border: 5px double var(--color-primary);text-transform: uppercase; font-weight: 600;}
+.circle-list{list-style-type: circle;}
+.circle-list li{padding: 10px 0;}
+.list-style-number{list-style-type: decimal;}

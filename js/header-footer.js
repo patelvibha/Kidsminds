@@ -39,7 +39,7 @@ class Myheader extends HTMLElement {
            
             <li class="dropdown"><a href="our-nursery.html"><span>Nursery</span> </a></li>
             <li><a href="local-authority.html">local authority</a></li>
-            <li><a href="">Career</a></li>
+            <li><a href="career.html">Career</a></li>
             <li><a href="blog.html">Blog </a></li>
             <li><a href="support.html">Support</a></li>
             <li><a href="contact-us.html">Contact</a></li>
@@ -97,7 +97,7 @@ class Myfooter extends HTMLElement {
                <li><i class="bi bi-chevron-right"></i><a href="about-us.html">About Us</a></li>
                <li><i class="bi bi-chevron-right"></i><a href="career.html">career</a></li>
                <li><i class="bi bi-chevron-right"></i><a href="blog.html">Blog</a></li>
-               <li><i class="bi bi-chevron-right"></i><a href="privacy_policy.html">privacy policy</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="privacy-policy.html">privacy policy</a></li>
                <li><i class="bi bi-chevron-right"></i><a href="support.html">Support</a></li>
    
              </ul>          

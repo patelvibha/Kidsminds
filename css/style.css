@@ -1383,10 +1383,7 @@
     border-color: var(--color-primary);
   }
   
-  .form-design .email-form input {
-    height: 48px;
-  }
-  
+ 
   .form-design .email-form textarea {
     padding: 10px 12px;
   }
@@ -1975,7 +1972,11 @@ background-color: #fff;
 .script-font-35 {
   font-size: 35px;
 }
-
+.form-control{
+  border-radius: 0;
+    padding: 12px;
+    color: #6c757d;
+}
 .script-font {
   font-family: 'Kalam', cursive !important;
 }

@@ -7,51 +7,61 @@ class Myheader extends HTMLElement {
     
     <!-- ======= Header ======= -->
     <header id="header" class="header">
-    <div class="container-fluid top-header">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="text-left contact-info">
-        <a class="Email" href="mailto:smiles@kidsminds.uk"><i class="bi bi-envelope-at"></i><span id="et-info-email">smiles@kidsminds.uk</span></a>
-        <a class="Phone" href="tel:+44 7577 996400"><i class="bi bi-phone icon"></i><span>+44 7577 996400</span></a>         
+      <div class="container-fluid top-header">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="text-left contact-info">
+          <a class="Email" href="mailto:smiles@kidsminds.uk"><i class="bi bi-envelope-at"></i><span id="et-info-email">smiles@kidsminds.uk</span></a>
+          <a class="Phone" href="tel:+44 7577 996400"><i class="bi bi-phone icon"></i><span>+44 7577 996400</span></a>         
+          </div>
+          
+          <div class="social-links d-flex">
+            <a href="" class="google"><i class="bi bi-google"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100092993372694" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+    
         </div>
-        
-        <div class="social-links d-flex">
-          <a href="" class="google"><i class="bi bi-google"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=100092993372694" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-  
       </div>
-    </div>
-   
-      <div class="container d-flex align-items-center justify-content-between">
-  
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-         
-           <img src="../img/logo.svg" alt=""> 
-           <!-- <h1>Kidsminds<span>.</span></h1> -->
-        </a>
-  
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About</a></li>        
+     
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
            
-            <li class="dropdown"><a href="our-nursery.html"><span>Nursery</span> </a></li>
-            <li><a href="local-authority.html">local authority</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a href="blog.html">Blog </a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="contact-us.html">Contact</a></li>
-          </ul>
-        </nav><!-- .navbar -->
-  
-        <a class="btn-signin primary-button" href="registration.html">Join Us</a>
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-  
-      </div>
-    </header><!-- End Header -->   
+             <img src="../img/logo.svg" alt=""> 
+             <!-- <h1>Kidsminds<span>.</span></h1> -->
+          </a>
+    
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About</a></li>                
+            
+              <li class="dropdown"><a href="#"><span>Nursery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="registration.html">Child registration</a></li>                   
+                  <li><a href="DBS.html">DBS Check</a></li>
+                  <li><a href="our-courses.html">Childcare Courses</a></li>
+                  <li><a href="activities.html">Child Activties</a></li>
+                  <li><a href="our-nursery.html">nursery</a></li>
+                </ul>
+              </li>
+
+              <li><a href="local-authority.html">local authority</a></li>
+              <li><a href="career.html">Career</a></li>
+              <li><a href="blog.html">Blog </a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+    
+          <a class="btn-signin primary-button" href="registration.html">Join Us</a>
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+        </div>
+      </header><!-- End Header -->
+    
     `;
   }
 }

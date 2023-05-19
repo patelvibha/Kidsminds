@@ -271,3 +271,34 @@ document.addEventListener('DOMContentLoaded', () => {
 //   $this.text(linkText);
 // });
 // })
+
+
+
+// Save the scroll position when the page is unloaded
+window.onbeforeunload = function() {
+
+  var scrollPosition = window.scrollY || window.pageYOffset;
+
+  sessionStorage.setItem('scrollPosition', scrollPosition);
+
+};
+
+
+
+
+// Restore the scroll position when the page is loaded
+
+window.onload = function() {
+
+  var scrollPosition = sessionStorage.getItem('scrollPosition');
+
+  if (scrollPosition) {
+
+      window.scrollTo(0, scrollPosition);
+
+  }
+
+  sessionStorage.removeItem('scrollPosition');
+
+};
+

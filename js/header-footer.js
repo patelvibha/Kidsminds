@@ -138,7 +138,7 @@ class Myfooter extends HTMLElement {
    </footer>
 
 
-  <a href="https://wa.me/7423281401?text=Hii!" class="float-whatsapp bounce" target="_blank">
+  <a href="https://wa.me/+447423281401?text=Hii!" class="float-whatsapp bounce" target="_blank">
   <i class="bi bi-whatsapp whatsapp"></i></a>
    <!-- End Footer -->
     

@@ -60,15 +60,27 @@
 /*---------------------------------------------------------------------------------------------------------------*/
 @media (max-width:575px){.breadcrumbs{margin-top:70px;}
 .menu .nav-link{margin:0 10px;padding:10px 0;}
-.header{height:70px;}
+.header{height:auto;}
 .menu .nav-link h4{font-size:16px;}
 .events .event-item{min-height:500px;}
+.hero{min-height:auto;background-image:url(../img/activity/activity\(1\).png);}
+.hero h2{font-size:20px;}
+.hero p{width:60%;font-size:12px;}
+section{overflow:hidden;padding:50px 0;}
 }
 /*---------------------------------------------------------------------------------------------------------------*/
 @media (max-width:480px){
-
-}
-/*---------------------------------------------------------------------------------------------------------------*/
-@media (max-width:320px){
+  .section-header p {
+    font-size: 18px;}
+    .section-header {
+      padding-bottom: 16px;
+  }
+  .top-header .Email, .top-header .Phone {
+    font-size: 10px;}
+    .header .primary-button{display: none;}
+    .header .logo img {
+      max-height: 50px;
   
 }
+/*---------------------------------------------------------------------------------------------------------------*/
+@media (max-width:320px){}

@@ -1,360 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Kids Minds</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="img/favicon.svg" rel="icon">
-  <link href="img/favicon.svg" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
-  
-
-  <!-- lib CSS Files -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="lib/aos/aos.css" rel="stylesheet">
-  <link href="lib/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-
-</head>
-
-<body>
-   
-<my-header></my-header>
-
-<section class="breadcrumbs">
-  <div class="container">
-    <div class="text-center">
-      <h2>Child Registration</h2>
-      <ol>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="our-nursery.html">Our Nursery</a>
-        </li>
-        <li class="active">Registration Form</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="child-registration">
-   <div class="row">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kids Minds</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="img/favicon.svg" rel="icon">
+    <link href="img/favicon.svg" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
+    <!-- lib CSS Files -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/aos/aos.css" rel="stylesheet">
+    <link href="lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+  </head>
+  <body>
+    <my-header></my-header>
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="text-center">
+          <h2>Child Registration</h2>
+          <ol>
+            <li>
+              <a href="https://www.kidsminds.uk">Home</a>
+            </li>
+            <li>
+              <a href="our-nursery.html">Our Nursery</a>
+            </li>
+            <li class="active">Registration Form</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="child-registration">
+      <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 form-section form-design">
-            <form action="https://formsubmit.co/vrushali@vasavebusiness.com" method="post" role="form" class="email-form p-3 p-md-4 mt-0">
+          <form action="https://formsubmit.co/vrushali@vasavebusiness.com" method="post" role="form" class="email-form p-3 p-md-4 mt-0">
+            <div class="row">
+              <div class="section-header text-center">
+                <p>
+                  <span> Child Information</span>
+                </p>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="fname" class="form-control" id="fname" placeholder="Child First Name" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="MI" class="form-control" id="MI" placeholder="Middle Name" required>
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="lname" class="form-control" id="lname" placeholder="Child Last Name" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="Child_Religion" class="form-control" id="Child_Religion" placeholder="Child’s Religion" required>
+              </div>
+           
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="flanguage" class="form-control" id="flanguage" placeholder="First spoken language " required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <select placeholder="Gender" required id="gender" name="gender" class="form-control">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="addressline1" class="form-control" id="address_line1" placeholder="Home Address line-1" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="lname" class="form-control" id="lname" placeholder="Home Adresss Line-2" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="state" class="form-control" id="state" placeholder="State" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="zip" class="form-control" id="zipcode" placeholder="Postal/Zip" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="date" onfocus="(this.type='date')" class="form-control" id="date" placeholder="Date of Birth" required>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="section-header text-left small">
+                <p>
+                  <span>Hours of child care required</span>
+                </p>
+                <div>(school hours are 9:00AM to 5:00PM)</div>
+              </div>
+              <div class="col-xl-6 form-group">
+                <div class="radio">
+                  <input type="radio" id="fullday" name="radio-group" checked>
+                  <label for="fullday">Full Day</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" id="half_day_morning" name="radio-group">
+                  <label for="half_day_morning">Half day morning</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" id="half_day_afternoon" name="radio-group">
+                  <label for="half_day_afternoon">Half day afternoon</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" id="other" name="radio-group">
+                  <label for="other">Other</label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="section-header text-left small">
+                <p>
+                  <span>Day of week required</span>
+                </p>
+              </div>
+              <div class="col-xl-6 form-group">
+                <div class="checkbox">
+                  <input type="checkbox" name="days" value="Monday">
+                  <label>Monday</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="days" value="Tuesday">
+                  <label>Tuesday</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="days" value="Wednesday">
+                  <label>wednesday</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="days" value="Thursday">
+                  <label>Thursday</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="days" value="Friday">
+                  <label>Friday</label>
+                </div>
+             
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <div class="section-header text-left small">
+                <p>
+                  <span>Do you required before or after school care?</span>
+                </p>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="before_school" value="before_school">
+                <label>Before School</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="after_school" value="after_school">
+                <label>After School</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="section-header text-center">
+                <p>
+                  <span>Parents Information</span>
+                </p>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="pfname" class="form-control" id="fname" placeholder="First Name" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="plname" class="form-control" id="pplname" placeholder="Last Name" required>
+              </div>
+              <div class="col-xl-12 form-group">
+                <input type="text" name="address" class="form-control" id="address" placeholder="Full Home Address" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="relationship" class="form-control" id="relationship" placeholder="Relationship" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <input type="text" name="emailid" class="form-control" id="emailid" placeholder="E-Mail" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="placeofwork" class="form-control" id="palceofwork" placeholder="Address" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="section-header text-left small">
+                <p>
+                  <span>Emergency Contact Number:</span>
+                </p>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="efname" class="form-control" id="efname" placeholder="First Name" required>
+              </div>
+              <div class="col-xl-6 form-group">
+                <input type="text" name="elname" class="form-control" id="elname" placeholder="Last Name" required>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 form-group">
+                  <input type="text" name="address" class="form-control" id="address" placeholder="Full Home Address" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="erelationship" class="form-control" id="erelationship" placeholder="Relationship" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="ephone_number" class="form-control" id="ephone_number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="eemailid" class="form-control" id="eemailid" placeholder="E-Mail" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="eplaceofwork" class="form-control" id="epalceofwork" placeholder="Address" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="section-header text-left small">
+                  <p>
+                    <span>Other people to authorized to pick up child from school:</span>
+                  </p>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="ofname" class="form-control" id="ofname" placeholder="First Name" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="olname" class="form-control" id="olname" placeholder="Last Name" required>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="orelationship" class="form-control" id="orelationship" placeholder="Relationship" required>
+                  </div>
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="ophone_number" class="form-control" id="ophone_number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                  </div>
+                </div>
+                <div class="row">  <div class="col-xl-6 form-group">
+                  <input type="text" name="eemailid" class="form-control" id="eemailid" placeholder="E-Mail" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                  <input type="text" name="eplaceofwork" class="form-control" id="epalceofwork" placeholder="Address" required>
+                </div>
+              </div>
               
                 <div class="row">
-                  <div class="section-header text-center">
-                    <p><span> Childern Information</span>
+                  <div class="section-header text-left small">
+                    <p>
+                      <span>Medical Information</span>
                     </p>
-                  </div>                  
-                  <div class="col-xl-6 form-group">
-                    <input type="text" name="fname" class="form-control" id="fname" placeholder="Child First Name" required>
                   </div>
                   <div class="col-xl-6 form-group">
-                    <input type="text" name="lname" class="form-control" id="lname" placeholder="Child Last Name" required>
+                    <input type="text" name="dfname" class="form-control" id="dfname" placeholder="Doctor First Name" required>
                   </div>
-                </div>
-
-              
-                  <div class="row">                    
-                    <div class="col-xl-6 form-group">
-                      <input type="text" name="Child_Religion" class="form-control" id="Child_Religion" placeholder="Child’s Religion" required>
-                    </div>
-                    <div class="col-xl-6 form-group">
-                      <input type="text" name="flanguage" class="form-control" id="flanguage" placeholder="First spoken language " required>
-                    </div>
-                  </div>
-                 
-                  <div class="row">
-                    <div class="col-xl-6 form-group">
-                      <input type="text" name="MI" class="form-control" id="MI" placeholder="MI" required>
-                    </div>
                   <div class="col-xl-6 form-group">
-                    <select placeholder="Gender" required id="gender" name="gender" class="form-control">
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                    </select></div>
-                    </div>
-
-                    <div class="row">
-                      
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="addressline1" class="form-control" id="address_line1" placeholder="HOME ADDRESS LINE-1" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="lname" class="form-control" id="lname" placeholder="HOME ADDRESS LINE-2" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                      
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="state" class="form-control" id="state" placeholder="State" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                      
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="zip" class="form-control" id="zipcode" placeholder="Postal/Zip" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="date" name="date" class="form-control" id="date"  placeholder="DATE OF BIRTH" required>
-                      </div>
-                    </div>
-                      <hr>
-                    <div class="row">
-                      <div class="section-header text-left small">
-                        <p><span>Hours of child care required</span> </p>
-                        <div>(school hourse are 7:00AM to 6:00PM)</div>
-                      </div>
-                      
-                      <div class="col-xl-6 form-group">
-
-                    
-                          <div class="radio">
-                            <input type="radio" id="fullday" name="radio-group" checked>
-                            <label for="fullday">Full Day</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="half_day_morning" name="radio-group">
-                            <label for="half_day_morning">Half day morning</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="half_day_afternoon" name="radio-group">
-                            <label for="half_day_afternoon">Half day afternoon</label>
-                          </div>
-                          <div class="radio">
-                            <input type="radio" id="other" name="radio-group">
-                            <label for="other">Other</label>
-                          </div>                     
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row"> 
-                      <div class="section-header text-left small">
-                        <p><span>Day of week required</span> </p>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <div class="checkbox">
-                          <input type="checkbox" name="days" value="monday">
-                          <label>Monday</label>
-                        </div> 
-                        
-                        <div class="checkbox">
-                          <input type="checkbox" name="days" value="tuesday">
-                          <label>Tuesday</label>
-                        </div>
-
-                        <div class="checkbox">
-                          <input type="checkbox" name="days" value="wednesday">
-                          <label>wednesday</label>
-                        </div>
-
-                        <div class="checkbox">
-                          <input type="checkbox" name="days" value="thursday">
-                          <label>Thursday</label>
-                        </div>
-
-                        <div class="checkbox">
-                          <input type="checkbox" name="days" value="friday">
-                          <label>Friday</label>
-                        </div>
-                        
-                       </div>
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                      <div class="section-header text-left small">
-                        <p><span>Do you required before or after school care?</span> </p>
-                      </div>
-                      <div class="checkbox">
-                        <input type="checkbox" name="before_school" value="before_school">
-                        <label>Before School</label>
-                      </div>
-                      <div class="checkbox">
-                        <input type="checkbox" name="after_school" value="after_school">
-                        <label>After School</label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="section-header text-center">
-                        <p><span>Parents Information</span> </p>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="pfname" class="form-control" id="fname" placeholder="First Name" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="plname" class="form-control" id="pplname" placeholder="Last Name" required>
-                      </div>
-                      <div class="col-xl-12 form-group">
-                        <input type="text" name="address" class="form-control" id="address" placeholder="FULL HOME ADDRESS" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                      
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="relationship" class="form-control" id="relationship" placeholder="Relationship" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="Phone Number" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                      
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="emailid" class="form-control" id="emailid" placeholder="E-Mail" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="placeofwork" class="form-control" id="palceofwork" placeholder="Place of Work address" required>
-                      </div>
-                    </div>
-                    
-                    <div class="row">
-                      <div class="section-header text-left small">
-                        <p><span>Emergency Contact Number:</span> </p>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="efname" class="form-control" id="efname" placeholder="First Name" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="elname" class="form-control" id="elname" placeholder="Last Name" required>
-                      </div>
-                      <div class="row">
-                        <div class="col-xl-12 form-group">
-                          <input type="text" name="address" class="form-control" id="address" placeholder="FULL HOME ADDRESS" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="erelationship" class="form-control" id="erelationship" placeholder="Relationship" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="ephone_number" class="form-control" id="ephone_number" placeholder="Phone Number" required>
-                        </div>
-                      </div>
-                      <div class="row">
-                        
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="eemailid" class="form-control" id="eemailid" placeholder="E-Mail" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="eplaceofwork" class="form-control" id="epalceofwork" placeholder="Place of Work address" required>
-                        </div>
-                      </div>
-                  
-                    <div class="row">
-                      <div class="section-header text-left small">
-                        <p><span>Other people to authorized to pick up child from school:</span> </p>
-                      </div>
-                     
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="ofname" class="form-control" id="ofname" placeholder="First Name" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="olname" class="form-control" id="olname" placeholder="Last Name" required>
-                      </div>
-                      <div class="row">
-                      
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="orelationship" class="form-control" id="orelationship" placeholder="Relationship" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="ophone_number" class="form-control" id="ophone_number" placeholder="Phone Number" required>
-                        </div>
-                      </div>
-                      <div class="row">
-                        
-                       
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="eemailid" class="form-control" id="eemailid" placeholder="E-Mail" required>
-                      </div>
-                      <div class="col-xl-6 form-group">
-                        <input type="text" name="eplaceofwork" class="form-control" id="epalceofwork" placeholder="Place of Work address" required>
-                      </div>
-                      <div class="row">
-                        <div class="section-header text-left small">
-                          <p><span>Medical Information</span> </p>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="dfname" class="form-control" id="dfname" placeholder="Doctor First Name" required>
-                        </div>
-                        <div class="col-xl-6 form-group">
-                          <input type="text" name="dlname" class="form-control" id="dlname" placeholder="Doctor Last Name" required>
-                        </div>
-                        <div class="col-xl-12 form-group">
-                          <input type="text" name="dphonenumber" class="form-control" id="dphonenumber" placeholder="(Doctor Phone Number)" required>
-                        </div>
-                          <div class="col-xl-6 form-group">
-                            <input type="text" name="dentistfname" class="form-control" id="dentistfname" placeholder="Dentist's First Name" required>
-                          </div>
-                          <div class="col-xl-6 form-group">
-                            <input type="text" name="dentistlname" class="form-control" id="dentistlname" placeholder="Dentist's Last Name" required>
-                          </div>
-                          <div class="col-xl-12 form-group">
-                            <input type="text" name="dentistphonenumber" class="form-control" id="dentistphonenumber" placeholder="(Dentist's Phone Number)" required>
-                          </div>
-                          <div class="col-xl-6 form-group">
-                            <input type="text" name="hospital" class="form-control" id="hospital" placeholder="Preferred Hospital Name" required>
-                          </div>
-                          <div class="col-xl-6 form-group">
-                            <input type="text" name="insurance" class="form-control" id="insurance" placeholder="Insurance/Health Coverage" required>
-                          </div>
-                    </div>   
-                    </form>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Please wirte if required any additional details over here" required></textarea>
+                    <input type="text" name="dlname" class="form-control" id="dlname" placeholder="Doctor Last Name" required>
+                  </div>
+                  <div class="col-xl-12 form-group">
+                    <input type="text" name="dphonenumber" class="form-control" id="dphonenumber" placeholder="Doctor Phone Number" pattern="[0-9]{10}" required>
+                  </div>
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="dentistfname" class="form-control" id="dentistfname" placeholder="Dentist's First Name" required>
+                  </div>
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="dentistlname" class="form-control" id="dentistlname" placeholder="Dentist's Last Name" required>
+                  </div>
+                  <div class="col-xl-12 form-group">
+                    <input type="text" name="dentistphonenumber" class="form-control" id="dentistphonenumber" placeholder="Dentist's Phone Number" pattern="[0-9]{10}" required>
+                  </div>
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="hospital" class="form-control" id="hospital" placeholder="Preferred Hospital Name" required>
+                  </div>
+                  <div class="col-xl-6 form-group">
+                    <input type="text" name="insurance" class="form-control" id="insurance" placeholder="Insurance/Health Coverage" required>
+                  </div>
                 </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit" class="primary-button">SUBMIT</button></div>
-              </form>
+          
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Please wirte if required any additional details over here" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="primary-button">SUBMIT</button>
+          </div>
+          </form>
         </div>
         <div class="col-md-2"></div>
-    </div>
-</section>
-<my-footer></my-footer>
-
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<div id="preloader"></div>
-
-<!-- lib JS Files -->
-<script src=" lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src=" lib/aos/aos.js"></script>
-<script src=" lib/glightbox/js/glightbox.min.js"></script>
-<script src=" lib/purecounter/purecounter_vanilla.js"></script>
-<script src=" lib/swiper/swiper-bundle.min.js"></script>
-<script src=" lib/php-email-form/validate.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Template Main JS File -->
-<script src=" js/main.js"></script>
-<script src="js/header-footer.js"></script>
-
-</body>
-
+      </div>
+    </section>
+    <my-footer></my-footer>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <div id="preloader"></div>
+    <!-- lib JS Files -->
+    <script src=" lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src=" lib/aos/aos.js"></script>
+    <script src=" lib/glightbox/js/glightbox.min.js"></script>
+    <script src=" lib/purecounter/purecounter_vanilla.js"></script>
+    <script src=" lib/swiper/swiper-bundle.min.js"></script>
+    <script src=" lib/php-email-form/validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src=" js/main.js"></script>
+    <script src="js/header-footer.js"></script>
+  </body>
 </html>

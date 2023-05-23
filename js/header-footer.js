@@ -15,10 +15,10 @@ class Myheader extends HTMLElement {
           </div>
           
           <div class="social-links d-flex">
-            <a href="" class="google"><i class="bi bi-google"></i></a>
+            
             <a href="https://www.facebook.com/profile.php?id=100092993372694" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/kidsmindsltd4/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/kids-minds-ltd/" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
     
         </div>
@@ -26,7 +26,7 @@ class Myheader extends HTMLElement {
      
         <div class="container d-flex align-items-center justify-content-between">
     
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+          <a href="https://www.kidsminds.uk/" class="logo d-flex align-items-center me-auto me-lg-0">
            
              <img src="../img/logo.svg" alt=""> 
              <!-- <h1>Kidsminds<span>.</span></h1> -->
@@ -34,24 +34,24 @@ class Myheader extends HTMLElement {
     
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About</a></li>                
+              <li><a href="https://www.kidsminds.uk">Home</a></li>
+              <li><a href="https://www.kidsminds.uk/about-us.html">About</a></li>                
             
               <li class="dropdown"><a href="#"><span>Nursery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="registration.html">Child registration</a></li>                   
-                  <li><a href="DBS.html">DBS Check</a></li>
-                  <li><a href="our-courses.html">Childcare Courses</a></li>
-                  <li><a href="activities.html">Child Activties</a></li>
-                  <li><a href="our-nursery.html">nursery</a></li>
+                  <li><a href="https://www.kidsminds.uk/registration.html">Registration Form</a></li>                   
+                  <li><a href="https://www.kidsminds.uk/DBS.html">DBS Check</a></li>
+                  <li><a href="https://www.kidsminds.uk/childcare-courses.html">Childcare Courses</a></li>
+                  <li><a href="https://www.kidsminds.uk/activity.html">Child Activity</a></li>
+                 
                 </ul>
               </li>
 
               <li><a href="local-authority.html">local authority</a></li>
-              <li><a href="career.html">Career</a></li>
-              <li><a href="blog.html">Blog </a></li>
-              <li><a href="support.html">Support</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
+              <li><a href="Careers.html">Careers</a></li>
+              <li><a href="https://www.kidsminds.uk/blog.html">Blog </a></li>
+              <li><a href="https://www.kidsminds.uk/support.html">Support</a></li>
+              <li><a href="https://www.kidsminds.uk/contact-us.html">Contact</a></li>
             </ul>
           </nav><!-- .navbar -->
     
@@ -95,7 +95,7 @@ class Myfooter extends HTMLElement {
                <li><i class="bi bi-geo-fill"></i> <p class="pr-5">32, Lynwood Gardens, Croydon, England, CR0 4QH</p></li>
                <li><i class="bi bi-telephone"></i><p>+44 7577 996400</p></li>
                <li><i class="bi bi-envelope-at"></i><p>smiles@kidsminds.uk</p></li>
-               <li><i class="pt-1 bi bi-clock icon"></i><div><p>Mon-Fri : 09AM - 17PM</p> <p>Sat-Sun : Closed</p></div></li>
+               <li><i class="pt-1 bi bi-clock icon"></i><div><p>Mon-Fri : 09AM - 5PM</p> <p>Sat-Sun : Closed</p></div></li>
              </ul>      
            </div>
          </div>
@@ -104,11 +104,11 @@ class Myfooter extends HTMLElement {
            <div>
              <h4>Quick Links</h4>
              <ul>
-               <li><i class="bi bi-chevron-right"></i><a href="about-us.html">About Us</a></li>
-               <li><i class="bi bi-chevron-right"></i><a href="career.html">career</a></li>
-               <li><i class="bi bi-chevron-right"></i><a href="blog.html">Blog</a></li>
-               <li><i class="bi bi-chevron-right"></i><a href="privacy-policy.html">privacy policy</a></li>
-               <li><i class="bi bi-chevron-right"></i><a href="support.html">Support</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="https://www.kidsminds.uk/about-us.html">About Us</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="https://www.kidsminds.uk/Careers.html">Careers</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="https://www.kidsminds.uk/blog.html">Blog</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="https://www.kidsminds.uk/privacy-policy.html">privacy policy</a></li>
+               <li><i class="bi bi-chevron-right"></i><a href="https://www.kidsminds.uk/support.html">Support</a></li>
    
              </ul>          
            </div>
@@ -118,10 +118,9 @@ class Myfooter extends HTMLElement {
          <div class="col-lg-3 col-md-6 footer-links">
            <h4>Follow Us</h4>
            <div class="social-links d-flex">
-             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
              <a href="https://www.facebook.com/profile.php?id=100092993372694" class="facebook"><i class="bi bi-facebook"></i></a>
-             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+             <a href="https://www.instagram.com/kidsmindsltd4/" class="instagram"><i class="bi bi-instagram"></i></a>
+             <a href="https://www.linkedin.com/company/kids-minds-ltd/" class="linkedin"><i class="bi bi-linkedin"></i></a>
            </div>
          </div>
    
@@ -138,7 +137,7 @@ class Myfooter extends HTMLElement {
    </footer>
 
 
-  <a href="https://wa.me/7423281401?text=Hii!" class="float-whatsapp bounce" target="_blank">
+  <a href="https://wa.me/+447951455813?text=Hii!" class="float-whatsapp bounce" target="_blank">
   <i class="bi bi-whatsapp whatsapp"></i></a>
    <!-- End Footer -->
     

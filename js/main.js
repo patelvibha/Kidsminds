@@ -161,7 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      // disableOnInteraction: false,
+      centeredSlides: true
     },
     slidesPerView: 'auto',
     pagination: {
@@ -180,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
 
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       }
     }
   });
@@ -192,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 400,
     loop: true,
     centeredSlides: true,
+    
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -234,71 +236,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-
-// --------------------load more content js start
-
-// $(document).ready(function(){
-//   $(".content").slice(0, 2).show();
-//   $("#loadMore").on("click", function(e){
-//     e.preventDefault();
-//     $(".content:hidden").slice(0, 1).slideDown();
-//     if($(".content:hidden").length == 0) {
-//       $("#loadMore").text("No Content").addClass("noContent");
-//     }
-//   });
-  
-// })
-
-// --------------------load more content js end
-
-
-// show more js 
-// $(document).ready(function(){
-// $(".show-more a").on("click", function() {
-//   var $this = $(this); 
-//   var $content = $this.parent().prev("div.content");
-//   var linkText = $this.text().toUpperCase();    
-  
-//   if(linkText === "SHOW MORE"){
-//       linkText = "Show less";
-//       $content.switchClass("hideContent", "showContent", 400);
-//   } else {
-//       linkText = "Show more";
-//       $content.switchClass("showContent", "hideContent", 400);
-//   };
-
-//   $this.text(linkText);
-// });
-// })
-
-
-
-// Save the scroll position when the page is unloaded
-window.onbeforeunload = function() {
-
-  var scrollPosition = window.scrollY || window.pageYOffset;
-
-  sessionStorage.setItem('scrollPosition', scrollPosition);
-
-};
-
-
-
-
-// Restore the scroll position when the page is loaded
-
-window.onload = function() {
-
-  var scrollPosition = sessionStorage.getItem('scrollPosition');
-
-  if (scrollPosition) {
-
-      window.scrollTo(0, scrollPosition);
-
-  }
-
-  sessionStorage.removeItem('scrollPosition');
-
-};
 

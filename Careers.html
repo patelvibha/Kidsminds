@@ -88,7 +88,8 @@
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                           <option value="other">Other</option>
-                        </select></div>
+                        </select>
+                      </div>
                     </div>
 
                     <div class="row">
@@ -119,7 +120,12 @@
                        </div>
                         <div class="row">
                             <div class="col-xl-6 form-group">
-                                <input type="text" name="smoke" class="form-control" id="smoke" placeholder="Do you Smoke  YES/NO" required>
+                              <select placeholder="Do you Smoke" required id="smoke" name="smoke" class="form-control">
+                                <option value="" hidden>Do you smoke</option>
+                                  <option value="yes">Yes</option>
+                                  <option value="no">No</option>
+                                </select>
+                                
                             </div>
                             <div class="col-xl-6 form-group">
                               <input type="text" name="allergies" class="form-control" id="allergies" placeholder="Do you suffer from any allergies?" required>
@@ -149,28 +155,44 @@
                   </div>
                     
                     <div class="col-xl-14 form-group">
-                      <input type="text" name="DBS" class="form-control" id="DBS" placeholder="Do you have an up to date Enhanced DBS? YES/NO" required>
+                    <select required id="DBS" name="DBS" class="form-control">
+                        <option value="" hidden>Do you have an up to date Enhanced DBS?</option>
+                          <option value="yes">Yes</option>
+                          <option value="no">No</option>
+                        </select>
                     </div>
                     
                   </div>
                   <div class="row">
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="UDBS" class="form-control" id="UDBS" placeholder="If yes please let us know the issue date of your latest enhanced DBS - DD/MM/YYYY" required>
+                    <input type="text" onfocus="(this.type='date')" name="UDBS" class="form-control" id="UDBS" placeholder="If yes please let us know the issue date of your latest enhanced DBS - DD/MM/YYYY" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="UDBS" class="form-control" id="UDBS" placeholder="Are you subscribed to DBS update service? YES/NO" required>
+                    <select name="UDBS" class="form-control" id="UDBS" placeholder="Are you subscribed to DBS update service?" required>
+                      <option hidden>Are you subscribed to DBS update service?</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     <textarea class="form-control" name="message" rows="3" placeholder="Name on DBS check, and number (if on update service)" required></textarea>
                 </div>
                 <div class="col-xl-14 form-group">
-                    <input type="text" name="firstaid" class="form-control" id="firstaid" placeholder="Do you hold a current 12-hour paediatric first aid certificate? - YES/NO" required>
+                    <select name="firstaid" class="form-control" id="firstaid" placeholder="Do you hold a current 12-hour paediatric first aid certificate?" required>
+                    <option hidden>Do you hold a current 12-hour paediatric first aid certificate?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="firstaidcerti" class="form-control" id="firstaidcerti" placeholder="When does your first aid certificate expire (if applicable)? - DD/MM/YYYY" required>
+                    <input type="text" onfocus="(this.type='date')" name="firstaidcerti" class="form-control" id="firstaidcerti" placeholder="When does your first aid certificate expire (if applicable)? - DD/MM/YYYY" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="work" class="form-control" id="work" placeholder="Are you eligible to work in the UK? - YES/NO" required>
+                    <select name="work" class="form-control" id="work" placeholder="Are you eligible to work in the UK? " required>
+                      <option hidden>Are you eligible to work in the UK?</option>
+                    <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     <input type="text" name="passportnumber" class="form-control" id="passportnumber" placeholder="Passport number (if applicable)" required>
@@ -182,34 +204,66 @@
                     <input type="text" name="NI" class="form-control" id="NI" placeholder="National insurance number" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="vdrivingliceance" class="form-control" id="vdrivingliceance" placeholder="Do you hold a valid driving licence? YES/NO" required>
+                    <select name="vdrivingliceance" class="form-control" id="vdrivingliceance" placeholder="Do you hold a valid driving licence? " required>
+                      <option hidden>Do you hold a valid driving licence?</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="penalties" class="form-control" id="penalties" placeholder="Any penalties? YES/NO" required>
+                    <select  name="penalties" class="form-control" id="penalties" placeholder="Any penalties? " required>
+                    <option hidden>Any penalties?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="usecar" class="form-control" id="usecar" placeholder="Are you happy to use your car for work? YES/NO" required>
+                    <select name="usecar" class="form-control" id="usecar" placeholder="Are you happy to use your car for work?" required>
+                    <option hidden>Are you happy to use your car for work?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="ofset" class="form-control" id="ofset" placeholder="Are you Ofsted registered? YES/NO" required>
+                    <select name="ofset" class="form-control" id="ofset" placeholder="Are you Ofsted registered? " required>
+                    <option hidden>Are you Ofsted registered?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     <input type="text" name="ofsetnumber" class="form-control" id="ofsetnumber" placeholder="Ofsted number (if applicable)" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="ofsettodo" class="form-control" id="ofsettodo" placeholder="If you are not Ofsted registered are you willing to do so? YES/NO" required>
+                    <select name="ofsettodo" class="form-control" id="ofsettodo" placeholder="If you are not Ofsted registered are you willing to do so?" required>
+                    <option hidden>If you are not Ofsted registered are you willing to do so?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="plinsurance" class="form-control" id="plinsurance" placeholder="Do you have public liability (nanny) insurance? YES/NO" required>
+                    <select name="plinsurance" class="form-control" id="plinsurance" placeholder="Do you have public liability (nanny) insurance? " required>
+                    <option hidden>Do you have public liability (nanny) insurance?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="bringchild" class="form-control" id="bringchild" placeholder="OAre you looking for a position that allows you to bring your child to work? YES/NO" required>
+                    <select name="bringchild" class="form-control" id="bringchild" placeholder="Are you looking for a position that allows you to bring your child to work?" required>
+                    <option hidden>Are you looking for a position that allows you to bring your child to work?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="previousnanny" class="form-control" id="previousnanny" placeholder="Have you worked as a nanny with your own child in a previous role? YES/NO" required>
+                    <select name="previousnanny" class="form-control" id="previousnanny" placeholder="Have you worked as a nanny with your own child in a previous role?" required>
+                    <option hidden>Have you worked as a nanny with your own child in a previous role?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="plinsurance" class="form-control" id="plinsurance" placeholder="When are you able to start? - DD/MM/YYYY" required>
+                    <input type="text" onfocus="(this.type='date')"  name="plinsurance" class="form-control" id="plinsurance" placeholder="When are you able to start? - DD/MM/YYYY" required>
                   </div>
                   <div class="col-xl-14 form-group">
                     <input type="text" name="jobtitle" class="form-control" id="jobtitle" placeholder="What type of Nanny job are you looking for? Type sublable" required>
@@ -218,7 +272,12 @@
                     <input type="text" name="previousnanny" class="form-control" id="previousnanny" placeholder="How far from home would you be prepared to travel to work? Ex. 5mile" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="plinsurance" class="form-control" id="plinsurance" placeholder="Would you accompany the family on holiday and work trips? YES/NO/NOT SURE" required>
+                    <select name="plinsurance" class="form-control" id="plinsurance" placeholder="Would you accompany the family on holiday and work trips?" required>
+                    <option hidden>Would you accompany the family on holiday and work trips?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="notsure">Not Sure</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     <input type="text" name="jobtitle" class="form-control" id="jobtitle" placeholder="What type of Nanny job are you looking for? Type sublable" required>
@@ -268,23 +327,39 @@
                   </div>
                   <div class="row">
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="workweekends" class="form-control" id="workweekends" placeholder="Would you work weekends? YES/NO" required>
+                    <select name="workweekends" class="form-control" id="workweekends" placeholder="Would you work weekends?" required>
+                    <option hidden>workweekends" placeholder="Would you work weekends?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     <input type="text" name="bringchild" class="form-control" id="bringchild" placeholder="What hours would you like to ideally work? Ex. 9AM to 5PM" required>
                   </div>
                   <div class="col-xl-14 form-group">
-                    <input type="text" name="flexiblework" class="form-control" id="flexiblework" placeholder="Are you flexible with your hours? YES/NO" required>
+                    <select name="flexiblework" class="form-control" id="flexiblework" placeholder="Are you flexible with your hours?" required>
+                    <option hidden>flexiblework" placeholder="Are you flexible with your hours?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    </select>
                   </div>
                   <div class="col-xl-14 form-group">
                     
                       <textarea class="form-control" name="message" rows="5" placeholder="What would be your ideal job? Please describle Here.." required></textarea>
                     </div>
                     <div class="col-xl-14 form-group">
-                      <input type="text" name="babysetting" class="form-control" id="babysetting" placeholder="Would you be able to do the occasional babysitting for the family? YES/NO" required>
+                      <select name="babysetting" class="form-control" id="babysetting" placeholder="Would you be able to do the occasional babysitting for the family?" required>
+                      <option hidden>Would you be able to do the occasional babysitting for the family?</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      </select>
                     </div>
                     <div class="col-xl-14 form-group">
-                      <input type="text" name="householdduties" class="form-control" id="householdduties" placeholder="Are you willing to so some household duties? YES/NO" required>
+                      <select name="householdduties" class="form-control" id="householdduties" placeholder="Are you willing to so some household duties?" required>
+                      <option hidden>Are you willing to so some household duties?</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      </select>
                     </div>
                     <div class="col-xl-14 form-group">
                       <input type="text" name="hourlyexpectations" class="form-control" id="hourlyexpectations" placeholder=" Gross hourly expectation? Ex. £10.50" required>
@@ -302,7 +377,7 @@
                       <textarea class="form-control" name="message" rows="5" placeholder="Are you currently working? Please describle Here.." required></textarea>
                     </div>
                     </div>
-                    <!-- <div class="row"> 
+                    <div class="row"> 
 
                       <div class="section-header text-left">
                         <p><span>Experience</span> </p>
@@ -343,7 +418,7 @@
                         </div>
                         
                        </div>
-                    </div> -->
+                    </div>
 
                     <div class="row"> 
                       <div class="section-header text-left">
@@ -391,10 +466,10 @@
                       </div>
                       <div class="row">
                         <div class="col-xl-6 form-group">
-                          <input type="text" name="startendemp1" class="form-control" id="startendemp1" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
+                          <input type="text" onfocus="(this.type='date')" name="startendemp1" class="form-control" id="startendemp1" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
                         </div>
                         <div class="col-xl-6 form-group">
-                          <input type="text" name="startendemp1" class="form-control" id="startendemp2" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
+                          <input type="text" onfocus="(this.type='date')" name="startendemp1" class="form-control" id="startendemp2" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
                         </div>
                       </div>
                       
@@ -409,13 +484,17 @@
                         <textarea class="form-control" name="eaddress" rows="5" placeholder="Please write Employer's Address details over here" required></textarea>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="econtact" class="form-control" id="econtact" placeholder="Employer's contact number" required>
+                        <input type="text" name="econtact" class="form-control" id="econtact" pattern="[0-9]{10}" placeholder="Employer's contact number" required>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="eemail" class="form-control" id="eemail" placeholder="Employer's email address Ex. example@example.com" required>
+                        <input type="email" name="eemail" class="form-control" id="eemail" placeholder="Employer's email address Ex. example@example.com" required>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="cemp1" class="form-control" id="cemp1" placeholder="Can we contact this employer for a reference? YES/NO" required>
+                        <select name="cemp1" class="form-control" id="cemp1" placeholder="Can we contact this employer for a reference?" required>
+                        <option hidden>Can we contact this employer for a reference?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
                       </div>
                       <div class="col-xl-14 form-group">
                         <input type="text" name="Employer2" class="form-control" id="Employer2" placeholder="Employer 2" required>
@@ -425,14 +504,14 @@
                       </div>
                       <div class="row">
                         <div class="col-xl-6 form-group">
-                          <input type="text" name="startendemp1" class="form-control" id="startendemp1" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
+                          <input type="text" onfocus="(this.type='date')" name="startendemp1" class="form-control" id="startendemp1" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
                         </div>
                         <div class="col-xl-6 form-group">
-                          <input type="text" name="startendemp1" class="form-control" id="startendemp2" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
+                          <input type="text" onfocus="(this.type='date')" name="startendemp1" class="form-control" id="startendemp2" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
                         </div>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="eend2" class="form-control" id="eend2" placeholder="Reasons employment ended (if applicable)" required>
+                        <input type="text" name="eend2" class="form-control" id="eend2" placeholder="Reasons employment ended (if applicable)">
                       </div>
                       <div class="form-group">
                         <textarea class="form-control" name="Duties2" rows="5" placeholder="Please write Duties details over here" required></textarea>
@@ -441,13 +520,17 @@
                         <textarea class="form-control" name="eaddress2" rows="5" placeholder="Please write Employer's Address details over here" required></textarea>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="econtact2" class="form-control" id="econtact2" placeholder="Employer's contact number" required>
+                        <input type="text" name="econtact2" class="form-control" id="econtact2" pattern="[0-9]{10}" placeholder="Employer's contact number" required>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="eemail2" class="form-control" id="eemail2" placeholder="Employer's email address Ex. example@example.com" required>
+                        <input type="email" name="eemail2" class="form-control" id="eemail2" placeholder="Employer's email address Ex. example@example.com" required>
                       </div>
                       <div class="col-xl-14 form-group">
-                        <input type="text" name="cemp2" class="form-control" id="cemp2" placeholder="Can we contact this employer for a reference? YES/NO" required>
+                        <select name="cemp2" class="form-control" id="cemp2" placeholder="Can we contact this employer for a reference?" required>
+                        <option hidden>Can we contact this employer for a reference?</option>
+                        <option value="yes"> Yes</option>
+                        <option value="no"> No</option>
+                        </select>
                       </div>
                       </div>
                       <div class="row">
@@ -461,8 +544,13 @@
                         <div class="col-xl-14 form-group">
                           <input type="text" name="Qualification1" class="form-control" id="Qualification1" placeholder="Qualification1" required>
                         </div>
-                        <div class="col-xl-14 form-group">
-                          <input type="text" name="Startenddate1" class="form-control" id="Startenddate1" placeholder="Start / end date" required>
+                        <div class="row">
+                          <div class="col-xl-6 form-group">
+                            <input type="text" onfocus="(this.type='date')" name="startendemp11" class="form-control" id="startendemp11" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
+                          </div>
+                          <div class="col-xl-6 form-group">
+                            <input type="text" onfocus="(this.type='date')" name="startendemp21" class="form-control" id="startendemp21" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
+                          </div>
                         </div>
                         <div class="col-xl-14 form-group">
                           <input type="text" name="scuname2" class="form-control" id="scuname2" placeholder="Name of school, college or university second" required>
@@ -470,17 +558,20 @@
                         <div class="col-xl-14 form-group">
                           <input type="text" name="Qualification2" class="form-control" id="Qualification2" placeholder="Qualification2" required>
                         </div>
-                        <div class="col-xl-14 form-group">
-                          <input type="text" name="Startenddate2" class="form-control" id="Startenddate2" placeholder="Start / end date" required>
-                        </div>
+                      
                         <div class="col-xl-14 form-group">
                           <input type="text" name="scuname3" class="form-control" id="scuname3" placeholder="Name of school, college or university third" required>
                         </div>
                         <div class="col-xl-14 form-group">
                           <input type="text" name="Qualification3" class="form-control" id="Qualification3" placeholder="Qualification3" required>
                         </div>
-                        <div class="col-xl-14 form-group">
-                          <input type="text" name="Startenddate1" class="form-control" id="Startenddate1" placeholder="Start / end date" required>
+                        <div class="row">
+                          <div class="col-xl-6 form-group">
+                            <input type="text" onfocus="(this.type='date')" name="startendemp13" class="form-control" id="startendemp13" placeholder="Start Date of employment Ex. DD/MM/YYYY" required>
+                          </div>
+                          <div class="col-xl-6 form-group">
+                            <input type="text" onfocus="(this.type='date')" name="startendemp14" class="form-control" id="startendemp24" placeholder="End Date of employment Ex. DD/MM/YYYY" required>
+                          </div>
                         </div>
                         <div class="form-group">
                           <textarea class="form-control" name="otherQualification" rows="5" placeholder="Other Qualification with dates here...." required></textarea>
@@ -489,16 +580,28 @@
                           <textarea class="form-control" name="otherinformation" rows="5" placeholder="Please let us know if there is anything else you would like us to know" required></textarea>
                         </div>
                         <div class="col-xl-14 form-group">
-                          <input type="text" name="joinbabysitting" class="form-control" id="joinbabysitting" placeholder="Would you like to join The Little Babysitting Company as a babysitter? YES/NO" required>
+                          <select name="joinbabysitting" class="form-control" id="joinbabysitting" placeholder="Would you like to join The Little Babysitting Company as a babysitter?" required>
+                          <option hidden>Would you like to join The Little Babysitting Company as a babysitter?</option>
+                          <option value="yes"> Yes</option>
+                          <option value="no"> No</option>
+                          </select>
                         </div>
                         <div class="col-xl-14 form-group">
-                          <input type="text" name="econtactnumber" class="form-control" id="econtactnumber" placeholder=" Would you like to be put on our temporary / emergency / ad-hoc nanny list? YES/NO" required>
+                          <select name="econtactnumber" class="form-control" id="econtactnumber" placeholder=" Would you like to be put on our temporary / emergency / ad-hoc nanny list?" required>
+                          <option hidden>Would you like to be put on our temporary / emergency / ad-hoc nanny list?</option>
+                          <option value="yes"> Yes</option>
+                          <option value="no"> No</option>
+                          </select>
                         </div>
                         <div class="col-xl-14 form-group">
                           <input type="text" name="hereaboutagency" class="form-control" id="hereaboutagency" placeholder="How did you hear about The Little Nanny Agency?" required>
                         </div>
                         <div class="col-xl-14 form-group">
-                          <input type="text" name="otheragency" class="form-control" id="otheragency" placeholder="Are you registered with any other agency? YES/NO" required>
+                          <select name="otheragency" class="form-control" id="otheragency" placeholder="Are you registered with any other agency?" required>
+                          <option hidden>Are you registered with any other agency?</option>
+                          <option value="yes"> Yes</option>
+                          <option value="no"> No</option>
+                          </select>
                         </div>
                         <div class="col-xl-14 form-group">
                           <input type="text" name="otheragencyyes" class="form-control" id="otheragencyyes" placeholder="If yes please state agency names Provide Name" required>

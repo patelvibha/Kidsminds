@@ -351,3 +351,13 @@ input[type=checkbox]:before{content:'';position:absolute;right:50%;top:50%;width
 40%{transform:translateY(-10px);}
 60%{transform:translateY(-8px);}
 }
+select.form-control, select{position: relative;
+    font-size: 14px;
+    background-size: 40px 12px;
+    background-image: url(../img/down-arrow.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.form-control:focus{box-shadow: none;}
+

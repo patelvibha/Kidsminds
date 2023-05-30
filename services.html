@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kids Minds</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="img/favicon.svg" rel="icon">
+    <link href="img/favicon.svg" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
+    <!-- lib CSS Files -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/aos/aos.css" rel="stylesheet">
+    <link href="lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+  </head>
+  <body>
+    <my-header></my-header>
+    <section class="breadcrumbs">
+        <div class="container">
+          <div class="text-center">
+            <h2>services</h2> 
+            <ol>
+              <li>
+                <a href="https://www.kidsminds.uk">Home</a>
+              </li>
+              <li class="active">services</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    <section class="container service-section">
+      <div class="row">
+        <div class="col-md-6"> 
+          <div class="section-header text-left">
+            <p> <span id="firstname" class="q"></span>
+            </p>
+           
+         </div>
+        
+          <div class="service-description q" id="surname"></div>
+          <a href="service.html" class="primary-button d-flex mt-3">More</a>
+        </div>
+        <div class="col-md-6">
+          <img id="myFile" width="100%"/> 
+        
+        </div>
+        </div>
+     
+     
+    </section>
+<script>
+  
+ const firstname = localStorage.getItem('firstname');
+ const surname = localStorage.getItem('surname');
+
+ document.getElementById('firstname').textContent = firstname;
+ document.getElementById('surname').textContent = surname;
+
+ const img = document.getElementById('myFile');
+ img.src = localStorage.getItem('myFile');
+ 
+</script>
+<my-footer></my-footer>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <div id="preloader"></div>
+    <!-- lib JS Files -->
+    <script src=" lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src=" lib/aos/aos.js"></script>
+    <script src=" lib/glightbox/js/glightbox.min.js"></script>
+    <script src=" lib/purecounter/purecounter_vanilla.js"></script>
+    <script src=" lib/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src=" js/main.js"></script>
+    <script src="js/header-footer.js"></script>
+  </body>
+</html>

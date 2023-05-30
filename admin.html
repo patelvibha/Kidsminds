@@ -1,17 +1,87 @@
-<h2>Form</h2>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Kids Minds</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+      <link href="img/favicon.svg" rel="icon">
+      <link href="img/favicon.svg" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata" rel="stylesheet">
+      <!-- lib CSS Files -->
+      <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="lib/aos/aos.css" rel="stylesheet">
+      <link href="lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+   </head>
+   <body>
+<section id="admin-page" class="admin-panel">
+    <div class="admin-header">
+<h3>Welcome to Kids minds Admin</h3>
+    </div>
+    <div class="container row">
+      <div class="col-md-3 left-bar">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#page1">Home </a> </li>   
+          <li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#page2"> Service</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#page1">Nursery </a> </li> 
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#page1">Activity </a> </li> 
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" data-bs-target="#page1">Courses </a> </li> 
+            
+       </ul>
+       </div>
 
-<form id="my_form">
-	<label for="name">First name: </label>
-	<input type="text" id="firstname" name="Firstname" value="" placeholder="Your name here...">
-	<br>
-	<label for="surname">Last name: </label>
-	<input type="text" id="surname" name="Lastname" value="" placeholder="Your surname here..."><br>
-  <input type="file" id="myFile" name="filename">
-	<br>
-	<input type="submit" value="Submit" id="btn" title="Get form's query-string">
 
-</form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <div class="col-md-9">
+    
+  <div class="tab-content">
+      <!-- End Starter Menu Content -->
+      <div class="tab-pane fade" id="page1">
+        <div class="team-inner">
+        
+        </div>
+     </div>
+     <!-- End Breakfast Menu Content -->
+    <div class="tab-pane fade active show" id="page2">
+       <div class="row team-inner">
+        <div class="inner-box p-3">
+          <h2>Service 1</h2>
+
+          <form id="my_form form-group">
+            <label for="firstname">service title: </label>
+            <input type="text" id="firstname" class="form-control"  name="Firstname" value="" placeholder="Your name here...">
+            <br>
+            <label for="surname">service description: </label>
+            <textarea type="text" class="form-control" id="surname" name="Lastname" value="" placeholder="Your surname here..."></textarea><br>
+            <label>service image: </label>
+            <input type="file" id="myFile" name="filename">
+            <br>
+            <input type="submit" class="primary-button mt-3" value="Submit" id="btn" title="Get form's query-string">
+  
+          </form>
+        </div>
+      
+        
+  
+       </div>
+    </div>
+  
+ </div>
+ </div>
+
+  </div>
+</section>
+
 <script>
   const form = document.getElementById("my_form");
   const firstname = document.getElementById("firstname");
@@ -21,7 +91,7 @@
     e.preventDefault();
     const firstnamevalue=firstname.value;
     const surnamevalue=surname.value;
-    // const myFilevalue=myFile.value;
+  
 
     localStorage.setItem('firstname',firstnamevalue);
     localStorage.setItem('surname',surnamevalue);
@@ -39,7 +109,7 @@
         reader.readAsDataURL(imgPath);
     }
 
-    window.location.href ="test1.html";  
+    window.location.href ="services.html";  
 
   })
 
@@ -47,3 +117,21 @@
 
 
 </script>
+
+<!-- <my-footer></my-footer> -->
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+<div id="preloader"></div>
+<!-- lib JS Files -->
+<script src=" lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src=" lib/aos/aos.js"></script>
+<script src=" lib/glightbox/js/glightbox.min.js"></script>
+<script src=" lib/purecounter/purecounter_vanilla.js"></script>
+<script src=" lib/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Template Main JS File -->
+<script src=" js/main.js"></script>
+<script src="js/header-footer.js"></script>
+</body>
+</html>
